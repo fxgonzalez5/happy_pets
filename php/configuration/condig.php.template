@@ -1,0 +1,7 @@
+<?php
+	// Datos de configuración para la conexión a la base de datos MySQL
+	define('HOST', 'localhost');    // Dirección del anfitrión (localhost o 127.0.0.1)
+	define('USER', 'su-usuario');   // Nombre de usuario de la base de datos (sino ha creado ninguno, por defecto es root)
+	define('PASS', 'su-clave');     // Clave de acceso a la base de datos (sino ha establecido una, dejar vacío)
+	define('DB_NAME', 'su-base_datos'); // Nombre de la base de datos a la que se va a conectar
+?>
