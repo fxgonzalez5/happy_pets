@@ -1,0 +1,11 @@
+/* Estilo a toda la página */
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/* Estilo pesonalizado al body */
+body{
+	font-family: 'Nunito', sans-serif;
+	max-width: 1920px; /* Establesco una anchura máxima para los elementos */
+}
