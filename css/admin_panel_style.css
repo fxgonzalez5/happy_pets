@@ -1,0 +1,65 @@
+/* Estilo personalizado al body de la página del administrador */
+html, body {
+    background-color: #F2F2F2;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo del menú de navegacion del administrador */
+.menu {
+    /* Tamaño al contenedor */
+    width: 20%;
+    height: 100%;
+
+    /* Márgenes al contenedor */
+    margin: 25px;
+    padding: 15px;
+    
+    /* Color y angulo de borde */
+    background-color: white;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+/* Aliniación del logo en el centro */
+.menu .img-logo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu .boton1 {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.menu .boton-salir {
+    position: absolute;
+    bottom: 15px;
+}
+
+.menu .boton1:hover{
+    background-color: #5799E3;
+    color: white;
+}
+
+
+/* Estilos Personalizados */
+.titulo1 {
+    font-size: 16px;
+    font-weight: 600; /* Tipo de letra SemiBold */
+}
+
+.titulo2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+}
