@@ -1,16 +1,16 @@
 /* Estilo personalizado al body de la página del administrador */
-html, body {
+body {
     background-color: #F2F2F2;
-    height:100%;
-    display: flex;
-    flex-direction: column;
 }
 
-/* Estilo del menú de navegacion del administrador */
+/* ------   
+    Menu    
+   ------ */
+
+/* Estilo del menu */
 .menu {
     /* Tamaño al contenedor */
     width: 20%;
-    height: 100%;
 
     /* Márgenes al contenedor */
     margin: 25px;
@@ -20,7 +20,9 @@ html, body {
     background-color: white;
     border-radius: 10px;
 
-    position: relative;
+    /* Comportamiento del elemento */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Aliniación del logo en el centro */
@@ -29,11 +31,13 @@ html, body {
     margin-bottom: 15px;
 }
 
+/* Eliminación de la dercoración a la etiqueta <a> para los hipervínculos */
 .menu a {
     text-decoration: none;
     color: black;
 }
 
+/* Diseño de los botones del menu */
 .menu .boton1 {
     margin-top: 15px;
     padding: 15px;
@@ -41,18 +45,126 @@ html, body {
     display: flex;
 }
 
-.menu .boton-salir {
-    position: absolute;
-    bottom: 15px;
-}
-
+/* Efecto al poner el cursor encima del boton para vizualizar cuando se haga click */
 .menu .boton1:hover{
     background-color: #5799E3;
     color: white;
 }
 
 
-/* Estilos Personalizados */
+/* ---------------------   
+    Barra de Navegación    
+   --------------------- */
+
+/* Estilo de la barra navegación */
+.barra-navegacion {
+    /* Márgenes */
+    margin-top: 25px;
+    margin-right: 25px;
+    padding: 15px;
+
+    /* Diseño */
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+}
+
+/* Diseño del contorno de las entradas (inputs) de la barra de navegación */
+.barra-navegacion .buscador, .barra-navegacion .calendario{
+    /* Márgenes */
+    margin-right: 20px;
+    padding: 5px 10px;
+
+    /* Borde */
+    border: 1px solid #9A9A9A;
+    border-radius: 5px;
+
+    /* Comportamiento, Alineación y Color de los elementos que se encuentran dentro del contenedor */
+    display: flex;
+    align-items: center;
+    color: #9A9A9A;
+}
+
+/* Eliminación del diseño predeterminado de las entradas (inputs) */
+.barra-navegacion input[type=text], .barra-navegacion input[type=date] {
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    color: #9A9A9A;
+    position: relative;
+}
+
+/* Diseño personalizado los calendarios para eliminar el icono que por defecto viene */
+.barra-navegacion input[type=date]::-webkit-calendar-picker-indicator{
+    /* Tamaño */
+    width: 100%;
+    height: 100%;
+
+    /* Posición */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Diseño */
+    margin: 0;
+    background: 0 0;
+    color: transparent;
+    opacity: 0;
+    pointer-events: auto;
+}
+
+/* Posicionamiento al boton de las notificaciones */
+.barra-navegacion .notifiacion {
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Creación del indicador de las notificaciones */
+.barra-navegacion .notifiacion .circulo {
+    /* Tamaño */
+    width: 13.5px;
+    height: 13.5px;
+
+    /* Posición */
+    position: absolute;
+    top: 5px;
+    right: 0px;
+
+    /* Diseño */
+    background-color: #5799E3;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* Estilo personalizado al número de notificaciones */
+.barra-navegacion .notifiacion .circulo p {
+    font-size: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+/* Creación del boton de las opciones de la cuenta */
+.barra-navegacion .cuenta {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Adecuación de la imagen al tamaño del contenedor */
+.barra-navegacion .cuenta img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* ------------------------   
+    Estilos Personalizados    
+   ------------------------ */
 .titulo1 {
     font-size: 16px;
     font-weight: 600; /* Tipo de letra SemiBold */

@@ -27,6 +27,7 @@
 
 </head>
 <body>
+
     <!-- Contenedor del Menu -->
     <div class="menu">
         
@@ -75,7 +76,7 @@
         </a>
 
         <a href="../guard/log_in_page.html">
-            <div class="boton1 boton-salir">
+            <div class="boton1">
                 <iconify-icon icon="humbleicons:logout" style="font-size: 24px;"></iconify-icon>
                 <p class="titulo2">Cerrar Sesión</p>
             </div>
@@ -83,6 +84,35 @@
 
     </div>
 
-    <script src="../../js/admin_panel_script.js"></script>
+    <!-- Contenedor del Navegador -->
+    <div class="barra-navegacion">
+        
+        <!-- Creación del Buscador -->
+        <div class="buscador">
+            <iconify-icon icon="material-symbols:search-rounded" style="font-size: 24px;"></iconify-icon>
+            <input type="text" name="buscar" placeholder="Buscar...">
+        </div>
+
+        <!-- Creación del Calendario -->
+        <div class="calendario">
+            <iconify-icon icon="radix-icons:calendar" style="font-size: 24px;"></iconify-icon>
+            <input type="date" name="fecha_inicial" >
+            <p>-</p>
+            <input type="date" name="fecha_final" >
+        </div>
+
+        <!-- Creación de las notificaciones -->
+        <div class="notifiacion">
+            <iconify-icon icon="ion:notifications-outline" style="font-size: 27px;"></iconify-icon>
+            <div class="circulo">
+                <p>1</p>
+            </div>
+        </div>
+
+        <!-- Creación del boton para el panel de cuenta -->
+        <div class="cuenta">
+            <img src="../../images/admin/cuenta.jpg" alt="Cuenta">
+        </div>
+    </div>
 </body>
 </html>
