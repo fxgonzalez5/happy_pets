@@ -159,7 +159,7 @@ body {
 
 .tarjeta-usuario {
     /* Tamaño */
-    width: 365px;
+    width: 370px;
     height: 225px;
 
     /* Márgenes */
@@ -182,7 +182,7 @@ body {
     Tarjeta de la Nueva Mascota    
    ----------------------------- */
 
-   .tarjeta-mascota {
+.tarjeta-mascota {
     /* Tamaño */
     width: 280px;
     height: 225px;
@@ -200,6 +200,32 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+
+/* -----------------------------------   
+    Tarjeta de Cantidad de Adopciones   
+   ----------------------------------- */
+.tarjeta-adopciones {
+    /* Tamaño */
+    width: 700px;
+    height: 100px;
+
+    /* Márgenes */
+    margin-top: 20px;
+    padding: 15px;
+
+    /* Diseño */
+    background-color: white;
+    border-radius: 10px;
+
+    /* Comportamiento */
+    display: flex;
+    flex-direction: column; 
+}
+
+.tarjeta-adopciones .contenido img {
+    margin-left: 20px;
 }
 
 
@@ -237,6 +263,11 @@ body {
 /* Estilo de texto al número que muestra el porcentaje de información completada */
 .porcentaje {
     font-size: 16px;
+    font-weight: bold;
+}
+
+.cantidad {
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -282,8 +313,11 @@ body {
 
 /* Contenido de la tarjeta */
 .contenido {
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 /* Creación del contenedor de la foto en las tarjetas */
@@ -324,4 +358,8 @@ body {
 .desbordamiento-texto {
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.contenedor-cantidad {
+    text-align: center;
 }
