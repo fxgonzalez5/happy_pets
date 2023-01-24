@@ -10,19 +10,16 @@ body {
 /* Estilo del menu */
 .menu {
     /* Tamaño al contenedor */
-    width: 20%;
+    width: 25%;
+    height: 89.3%;
 
     /* Márgenes al contenedor */
-    margin: 25px;
+    margin: 25px 10px 25px 25px;
     padding: 15px;
     
     /* Color y angulo de borde */
     background-color: white;
     border-radius: 10px;
-
-    /* Comportamiento del elemento */
-    display: flex;
-    flex-direction: column;
 }
 
 /* Aliniación del logo en el centro */
@@ -37,18 +34,10 @@ body {
     color: black;
 }
 
-/* Diseño de los botones del menu */
-.menu .boton1 {
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 10px;
+/* Estilo personalizado para el boton de cerrar sesión */
+.menu .btn-salir{
+    margin-top: auto;
     display: flex;
-}
-
-/* Efecto al poner el cursor encima del boton para vizualizar cuando se haga click */
-.menu .boton1:hover{
-    background-color: #5799E3;
-    color: white;
 }
 
 
@@ -150,28 +139,164 @@ body {
     width: 40px;
     height: 40px;
     margin-left: 15px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 /* Adecuación de la imagen al tamaño del contenedor */
 .barra-navegacion .cuenta img {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
     object-fit: cover;
 }
+
+
+/* ---------------------------   
+    Tarjeta del Nuevo Usuario    
+   --------------------------- */
+
+.tarjeta-usuario {
+    /* Tamaño */
+    width: 365px;
+    height: 225px;
+
+    /* Márgenes */
+    margin-top: 20px;
+    padding: 15px;
+
+    /* Diseño */
+    background-color: white;
+    border-radius: 10px;
+    font-size: 14px;
+
+    /* Comportamiento */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Contenido de la tarjeta */
+.tarjeta-usuario .contenido {
+    display: flex;
+    align-items: center;
+}
+
+/* Creación del contenedor de la foto del usuario */
+.tarjeta-usuario .contenido .foto-usuario {
+    width: 100px;
+    height: 130px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 7px grey;
+    overflow: hidden;
+}
+
+/* Adecuación de la foto del usuario al tamaño del contenedor */
+.tarjeta-usuario .contenido .foto-usuario img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Adecuación de la información del usuario al tamaño del contenedor */
+.tarjeta-usuario .contenido .informacion-usuario {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 
 /* ------------------------   
     Estilos Personalizados    
    ------------------------ */
+
+/* <<< Textos >>> */
+
+/* Estilo de texto al titulo del menu */
 .titulo1 {
     font-size: 16px;
     font-weight: 600; /* Tipo de letra SemiBold */
 }
 
+/* Estilo de texto a las opciones del menu */
 .titulo2 {
     font-size: 16px;
     font-weight: bold;
     margin-left: 15px;
+}
+
+/* Estilo de texto a título de las tarjetas */
+.titulo-tarjeta {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* Estilo de texto a los títulos de los campos que se mostrarán del usuario  */
+.titulo-campo {
+    font-weight: 600;
+}
+
+/* Estilo de texto al número que muestra el porcentaje de información completada */
+.porcentaje {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* <<< Botones >>> */
+
+/* Diseño de los botones del menu */
+.boton1 {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+}
+
+/* Efecto al poner el cursor encima del boton para vizualizar cuando se haga click */
+.boton1:hover{
+    background-color: #5799E3;
+    color: white;
+}
+
+/* Diseño de los botones de las tarjetas */
+.boton2 {
+    width: 125px;
+    height: 30px;
+    margin-left: auto;
+    background-color: #FF9054;
+    color: white;
+    font-weight: 600;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* <<< Contenedores >>> */
+
+/* Comportamiento de los elementos en la parte superior e inferior de las tarjetas */
+.cabecera-tarjeta, .pie-tarjeta {
+    display: flex;
+    align-items: center;
+}
+
+/* Adecuación de los datos a mostrar del usuario al tamaño de la tarjeta */
+.campo {
+    display: flex;
+    white-space: nowrap;
+}
+
+/* Adecuación del texto en los campos que sobrepasen el tamaño de la tarjeta */
+.desbordamiento-texto {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
