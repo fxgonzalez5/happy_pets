@@ -1,6 +1,24 @@
 /* Estilo personalizado al body de la página del administrador */
 body {
     background-color: #F2F2F2;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Contenedor de todo el contenido dentro de la pantalla */
+.contenido-general{
+    padding: 25px;
+
+    /* Creación de una tabla para ubicar cada elemento o componente */
+    display: grid;
+	grid-template-columns: 20% 27% 23% 30%;
+	grid-template-rows: repeat(4, auto);
+	grid-gap: 0px;
+
+	grid-template-areas: "menulat    barra       barra       barra"
+						 "menulat    usuario     mascota     postulante"
+						 "menulat    adopcion    adopcion    postulante"
+						 "menulat    tabla       tabla       tabla";
 }
 
 /* ------   
@@ -9,17 +27,23 @@ body {
 
 /* Estilo del menu */
 .menu {
+    /* Asignación del área correspondiente al contenedor dentro de la grilla o tabla */
+    grid-area: menulat;
+
     /* Tamaño al contenedor */
-    width: 25%;
-    height: 89.3%;
+    width: auto;
+    height: auto;
 
     /* Márgenes al contenedor */
-    margin: 25px 10px 25px 25px;
+    margin-right: 10px;
     padding: 15px;
     
     /* Color y angulo de borde */
     background-color: white;
     border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 /* Aliniación del logo en el centro */
@@ -47,9 +71,9 @@ body {
 
 /* Estilo de la barra navegación */
 .barra-navegacion {
+    grid-area: barra;
+
     /* Márgenes */
-    margin-top: 25px;
-    margin-right: 25px;
     padding: 15px;
 
     /* Diseño */
@@ -159,9 +183,11 @@ body {
 
 /* Estilo a la tarjeta del nuevo usuario */
 .tarjeta-usuario {
+    grid-area: usuario;
+
     /* Tamaño */
-    width: 370px;
-    height: 225px;
+    width: auto;
+    height: auto;
 
     /* Márgenes */
     margin-top: 20px;
@@ -185,12 +211,15 @@ body {
 
 /* Estilo a la tarjeta de la nueva mascota */
 .tarjeta-mascota {
+    grid-area: mascota;
+
     /* Tamaño */
-    width: 280px;
-    height: 225px;
+    width: auto;
 
     /* Márgenes */
     margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 15px;
 
     /* Diseño */
@@ -211,12 +240,15 @@ body {
 
 /* Estilo a la tarjeta de la cantidad de adopciones según el estado */
 .tarjeta-adopciones {
+    grid-area: adopcion;
+
     /* Tamaño */
-    width: 700px;
-    height: 100px;
+    width: auto;
+    height: auto;
 
     /* Márgenes */
     margin-top: 20px;
+    margin-right: 20px;
     padding: 15px;
 
     /* Diseño */
@@ -240,9 +272,11 @@ body {
 
 /* Estilo de la tarjeta de la lista de los postulantes */
 .tarjeta-postulantes {
+    grid-area: postulante;
+
     /* Tamaño */
-    width: 370px;
-    height: 365px;
+    width: auto;
+    height: auto;
 
     /* Márgenes */
     margin-top: 20px;
@@ -256,11 +290,16 @@ body {
 
 /* Estilo personalizado a las celdas de la tabla de los postulantes */
 .tarjeta-postulantes tr, .tarjeta-postulantes td {
+    /* Tamaño y Márgenes */
     height: 30px;
     padding: 0px 5px;
+
+    /* Alineación y Diseño */
     text-align: center;
     border-radius: 5px;
     border: 3px solid #F2F2F2;
+
+    /* Comportamiento */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -300,11 +339,18 @@ body {
     Tarjeta de Usuarios y Mascotas   
    -------------------------------- */
 
+/* Comportamiento al contenedor de las cartas de la parte inferior (Usuarios y Mascotas) */
+.tablas {
+    grid-area: tabla;
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Estilo de la tarjeta de la lista de los usuarios registrados */
 .tarjeta-inferior {
     /* Tamaño */
-    width: 520px;
-    height: 250px;
+    width: 46.5%;
+    height: auto;
 
     /* Márgenes */
     margin-top: 20px;
@@ -409,13 +455,20 @@ y la descripción de la mascota*/
 
 /* Diseño de los botones de las tarjetas */
 .boton2 {
+    /* Tamaño */
     width: 125px;
     height: 35px;
+
+    /* Márgen */
     margin-left: auto;
+
+    /* Colores y Estilo de Texto*/
     background-color: #FF9054;
     color: white;
     font-weight: 600;
-    border-radius: 10px;
+
+    /* Diseño y Comportamiento */
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -432,8 +485,7 @@ y la descripción de la mascota*/
 
 /* Contenido de la tarjeta */
 .contenido {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: 11.8px 0px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -441,8 +493,11 @@ y la descripción de la mascota*/
 
 /* Creación del contenedor de la foto en las tarjetas */
 .foto {
+    /* Tamaño */
     width: 100px;
     height: 130px;
+
+    /* Diseño */
     margin-right: 10px;
     border-radius: 10px;
     box-shadow: 0px 3px 7px grey;
@@ -458,9 +513,14 @@ y la descripción de la mascota*/
 
 /* Adecuación de la información en las tarjetas al tamaño del contenedor */
 .informacion {
+    /* Tamaño */
     width: 100%;
     height: 100%;
+    
+    /* Quitamos la función de que pueda crecer */
     flex: 1;
+    
+    /* Comportamiento */
     overflow: hidden;
     display: flex;
     flex-direction: column;
