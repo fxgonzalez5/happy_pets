@@ -296,6 +296,48 @@ body {
 }
 
 
+/* ---------------------   
+    Tarjeta de Usuarios   
+   --------------------- */
+
+/* Estilo de la tarjeta de la lista de los usuarios registrados */
+.tarjeta-usuarios {
+    /* Tamaño */
+    width: 520px;
+    height: 250px;
+
+    /* Márgenes */
+    margin-top: 20px;
+    padding: 15px;
+
+    /* Diseño */
+    background-color: white;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+/* Estilo personalizado a las celdas de la tabla de los usuarios */
+.tarjeta-usuarios tr, .tarjeta-usuarios td {
+    height: 30px;
+    padding: 0px 5px;
+    text-align: center;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Asignación del tamaño que ocuparán las celdas de la columna que contienen la fecha de nacimiento del usuario */
+.tarjeta-usuarios .fecha {
+    width: 15%;
+}
+
+/* Asignación del tamaño que ocuparán las celdas de la columna que contienen el correo electrónico del usuario */
+.tarjeta-usuarios .correo {
+    width: 25%;
+}
+
+
 /* ------------------------   
     Estilos Personalizados    
    ------------------------ */
@@ -456,16 +498,32 @@ table {
 .id {
     width: 30px;
     background-color: #F2F2F2;
+    border: 3px solid #F2F2F2;
 }
 
 /* Estilo a una fila de la tabla para que actue como un espacio entre dos filas */
 .espacio-filas {
-    height: 10px;
+    height: 10px !important;
 }
 
 /* Estilo a una columna (varias celdas) para que actuen como un espacio entre dos columnas */
 .espacio-columnas {
     width: 10px;
-    padding: 0px;
-    border: none;
+    padding: 0px !important;
+    border: none !important;
+}
+
+/* Color de borde para una celda específica */
+.columna1 {
+    border: 3px solid #5799E3;
+}
+
+/* Color de borde para una celda específica */
+.columna2 {
+    border: 3px solid #FF9054;
+}
+
+/* Color de borde para una celda específica */
+.columna3 {
+    border: 3px solid #FFD954;
 }
