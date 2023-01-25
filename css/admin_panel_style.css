@@ -296,12 +296,12 @@ body {
 }
 
 
-/* ---------------------   
-    Tarjeta de Usuarios   
-   --------------------- */
+/* --------------------------------   
+    Tarjeta de Usuarios y Mascotas   
+   -------------------------------- */
 
 /* Estilo de la tarjeta de la lista de los usuarios registrados */
-.tarjeta-usuarios {
+.tarjeta-inferior {
     /* Tamaño */
     width: 520px;
     height: 250px;
@@ -317,7 +317,7 @@ body {
 }
 
 /* Estilo personalizado a las celdas de la tabla de los usuarios */
-.tarjeta-usuarios tr, .tarjeta-usuarios td {
+.tarjeta-inferior tr, .tarjeta-inferior td {
     height: 30px;
     padding: 0px 5px;
     text-align: center;
@@ -328,12 +328,13 @@ body {
 }
 
 /* Asignación del tamaño que ocuparán las celdas de la columna que contienen la fecha de nacimiento del usuario */
-.tarjeta-usuarios .fecha {
+.tarjeta-inferior .fecha {
     width: 15%;
 }
 
-/* Asignación del tamaño que ocuparán las celdas de la columna que contienen el correo electrónico del usuario */
-.tarjeta-usuarios .correo {
+/* Asignación del tamaño que ocuparán las celdas de la columna que contienen el correo electrónico del usuario 
+y la descripción de la mascota*/
+.tarjeta-inferior .final {
     width: 25%;
 }
 
