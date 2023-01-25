@@ -157,6 +157,7 @@ body {
     Tarjeta del Nuevo Usuario    
    --------------------------- */
 
+/* Estilo a la tarjeta del nuevo usuario */
 .tarjeta-usuario {
     /* Tamaño */
     width: 370px;
@@ -182,6 +183,7 @@ body {
     Tarjeta de la Nueva Mascota    
    ----------------------------- */
 
+/* Estilo a la tarjeta de la nueva mascota */
 .tarjeta-mascota {
     /* Tamaño */
     width: 280px;
@@ -206,6 +208,8 @@ body {
 /* -----------------------------------   
     Tarjeta de Cantidad de Adopciones   
    ----------------------------------- */
+
+/* Estilo a la tarjeta de la cantidad de adopciones según el estado */
 .tarjeta-adopciones {
     /* Tamaño */
     width: 700px;
@@ -224,8 +228,71 @@ body {
     flex-direction: column; 
 }
 
+/* Margen a las imagenes para que se apeguen al texto */
 .tarjeta-adopciones .contenido img {
     margin-left: 20px;
+}
+
+
+/* ------------------------   
+    Tarjeta de Postulantes   
+   ------------------------ */
+
+/* Estilo de la tarjeta de la lista de los postulantes */
+.tarjeta-postulantes {
+    /* Tamaño */
+    width: 370px;
+    height: 365px;
+
+    /* Márgenes */
+    margin-top: 20px;
+    padding: 15px;
+
+    /* Diseño */
+    background-color: white;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+/* Estilo personalizado a las celdas de la tabla de los postulantes */
+.tarjeta-postulantes tr, .tarjeta-postulantes td {
+    height: 30px;
+    padding: 0px 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 3px solid #F2F2F2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Asignación del tamaño que ocuparán las celdas de la columna que contienen el nombre del postulante */
+.tarjeta-postulantes .nombre-postulante {
+    width: 30%;
+}
+
+/* Estilo y color al texto de la columna que contiene el estado que lleva una postulante con relación a la adopción de una mascota */
+.tarjeta-postulantes .estado {
+    font-weight: 600;
+    color: white;
+}
+
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Completado' */
+.tarjeta-postulantes .completado {
+    background-color: #5799E3;
+    border: 3px solid #5799E3;
+}
+
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Pendiente' */
+.tarjeta-postulantes .pendiente {
+    background-color: #FF9054;
+    border: 3px solid #FF9054;
+}
+
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Cancelado' */
+.tarjeta-postulantes .cancelado {
+    background-color: #9A9A9A;
+    border: 1px solid #9A9A9A;
 }
 
 
@@ -255,6 +322,14 @@ body {
     margin-left: 10px;
 }
 
+/* Estilo al texto ver todo de las tarjetas */
+.subtitulo-tarjeta{
+    margin-top: auto;
+    margin-left: auto;
+    color: #9A9A9A;
+    text-decoration: underline;
+}
+
 /* Estilo de texto a los títulos de los campos que se mostrarán del usuario  */
 .titulo-campo {
     font-weight: 600;
@@ -266,6 +341,7 @@ body {
     font-weight: bold;
 }
 
+/* Estilo de texto al número que muestra la cantidad de adopciones por cada estado */
 .cantidad {
     font-size: 25px;
     font-weight: bold;
@@ -360,6 +436,36 @@ body {
     text-overflow: ellipsis;
 }
 
+/* Aliniación centrada del texto para cada cantidad de adopciones */
 .contenedor-cantidad {
     text-align: center;
+}
+
+
+/* <<< Tablas >>> */
+
+/* Diseño de las tablas */
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 15px;
+    border-spacing: 0px;
+}
+
+/* Estilo a las celdas de la columna que contienen el identificador de cada entidad */
+.id {
+    width: 30px;
+    background-color: #F2F2F2;
+}
+
+/* Estilo a una fila de la tabla para que actue como un espacio entre dos filas */
+.espacio-filas {
+    height: 10px;
+}
+
+/* Estilo a una columna (varias celdas) para que actuen como un espacio entre dos columnas */
+.espacio-columnas {
+    width: 10px;
+    padding: 0px;
+    border: none;
 }
