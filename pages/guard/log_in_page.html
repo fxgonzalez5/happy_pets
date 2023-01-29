@@ -30,10 +30,49 @@
 
 <body>
     <div class="contenido">
+        <!-- contenedor de la tarjeta -->
         <div class="tarjeta">
 
+            <!-- corte del cuadro blanco a la imagen -->
+            <div class="corte"></div>
+
+            <!-- parte izquierda de la tarjeta -->
             <form class="formulario" action="">
+
+                <!-- título de la tarjeta -->
+                <p class="titulo">BIENVENIDO/A</p>
+
+                <!-- logo de la página -->
+                <img src="../../images/logo_happy_pets.png" alt="Logo Happy Pets"> 
                 
+                <!-- cajas de texto -->
+                <div class="credencial">
+                    <iconify-icon icon="mingcute:user-3-line" style="font-size: 40px;"></iconify-icon>
+                    <input type="text" name="usuario" placeholder="Usuario o Correo Electrónico">
+                </div>
+
+                <div class="credencial">
+                    <iconify-icon icon="material-symbols:lock-outline" style="font-size: 40px;"></iconify-icon>
+                    <input type="password" name="contrasena" placeholder="Contraseña">
+                </div>
+                
+                <div class="inferior">
+                    <a class="pregunta" href=""> ¿Has olvidado tu contraseña?</a>
+                    <button>Iniciar Sesión</button>
+                </div>
+
+                <div class="botones">
+                   
+                    <div class="boton">
+                        <iconify-icon icon="logos:facebook" style="color: #00aae4; font-size: 40px;"></iconify-icon>
+                        <p>Facebook</p>
+                    </div>
+    
+                    <div class="boton">
+                      <iconify-icon icon="logos:google-icon" style="color: #00aae4; font-size: 40px;"></iconify-icon>
+                       <p>Google</p> 
+                    </div>
+                </div>
             </form>
 
             <div class="imagen-tarjeta">
