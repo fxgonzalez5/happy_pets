@@ -3,4 +3,43 @@ body {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom, #F2F2F2 50%, #5799E3 50%);
+
+}
+
+/* estructura del contenido general de la pagina */
+.contenido {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* estilo de la tarjeta central de la pagina */
+.contenido .tarjeta {
+    width: 85%;
+    height: 90%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* estructura de la primera parte del contenedor central */
+.contenido .tarjeta .formulario {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
+/* tamaño del contenedor de la imagen de la parte derecha de la tarjeta */
+.contenido .tarjeta .imagen-tarjeta {
+    width: 50%;
+    height: 100%;
+}
+
+/* estilo a la imagen de la tarjeta */
+.contenido .tarjeta .imagen-tarjeta img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
