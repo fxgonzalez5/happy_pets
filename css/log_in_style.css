@@ -103,18 +103,35 @@ body {
 /* estilo del contenedor de la parte inferior de la tarjeta */
 .contenido .tarjeta .formulario .inferior{
     width: 70%;
-    height: 35px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* estilo de la pregunta para ayudar al usuario a recuperar su contraseña */
-.contenido .tarjeta .formulario .inferior .pregunta {
+/* estilo de los enlaces a las diferentes páginas */
+.contenido .tarjeta .formulario .inferior .enlaces a {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     color: #9A9A9A;
+}
+
+/* estilo al poner el puntero encima del enlace que redireccióna a otra página*/
+.contenido .tarjeta .formulario .inferior .enlaces a:hover {
+    color: #5799E3;
+}
+
+/* estilo del texto para registrarse en caso de no tener cuenta */
+.contenido .tarjeta .formulario .inferior .enlaces .registrarse {
+    margin-top: 5px;
+    display: flex;
+}
+
+.contenido .tarjeta .formulario .inferior .enlaces .registrarse p {
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 /* estilo del boton de iniciar sesión */
