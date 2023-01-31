@@ -32,7 +32,7 @@ body {
 
     /* Tamaño al contenedor */
     width: auto;
-    height: auto;
+    height: 96%;
 
     /* Márgenes al contenedor */
     margin-right: 10px;
@@ -99,7 +99,7 @@ body {
 }
 
 /* Eliminación del diseño predeterminado de las entradas (inputs) */
-.barra-navegacion input[type=text], .barra-navegacion input[type=date] {
+.barra-navegacion input {
     margin-left: 10px;
     border: none;
     outline: none;
@@ -342,6 +342,7 @@ body {
 /* Comportamiento al contenedor de las cartas de la parte inferior (Usuarios y Mascotas) */
 .tablas {
     grid-area: tabla;
+    height: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -350,7 +351,6 @@ body {
 .tarjeta-inferior {
     /* Tamaño */
     width: 46.5%;
-    height: auto;
 
     /* Márgenes */
     margin-top: 20px;

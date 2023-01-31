@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titulo de la pestaña -->
+    <title>HappyPets</title>
+    
+    <!-- Carga del logo en la pestaña -->
+    <link rel="icon" href="../../images/logo.png" sizes="32x32" />
+    <link rel="icon" href="../../images/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../../images/logo.png" />
+    
+    <!-- Carga de estilos -->
+    <link rel="stylesheet" type="text/css" href="../../css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/admin_panel_animals_style.css">
+    
+    <!-- Importación de tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+
+    <!-- Importación de librería de iconos -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+
+</head>
+<body>
+    <div class="contenido-general">
+        <!-- Contenedor del Menu -->
+        <div class="menu">
+            
+            <!-- Contenedor del Logo -->
+            <div class="img-logo">
+                <img src="../../images/logo_happy_pets.png" alt="Logo HappyPets" height="75">
+            </div>
+
+            <!-- Título del Menu -->
+            <p class="titulo1">Menu</p>
+
+            <!-- Opciones del Menu -->
+            <a href="admin_panel_home.html">
+                <div class="boton1">
+                    <iconify-icon class="icono-home" icon="fluent:home-24-regular" height="24"></iconify-icon>
+                    <p class="titulo2">Inicio</p>
+                </div>
+            </a>
+
+            <a href="admin_panel_animals.html">
+                <div class="boton1">
+                    <iconify-icon icon="cil:animal" style="font-size: 24px;"></iconify-icon>
+                    <p class="titulo2">Animales</p>
+                </div>
+            </a>
+
+            <a href="admin_panel_persons.html">
+                <div class="boton1">
+                    <iconify-icon icon="heroicons:user-group" style="font-size: 24px;"></iconify-icon>
+                    <p class="titulo2">Personas</p>
+                </div>
+            </a>
+
+            <a href="admin_panel_postulants.html">
+                <div class="boton1">
+                    <iconify-icon icon="teenyicons:text-document-outline" style="font-size: 24px;"></iconify-icon>
+                    <p class="titulo2">Postulantes</p>
+                </div>
+            </a>
+
+            <a href="admin_panel_emails.html">
+                <div class="boton1">
+                    <iconify-icon icon="eva:email-outline" style="font-size: 24px;"></iconify-icon>
+                    <p class="titulo2">Correo</p>
+                </div>
+            </a>
+
+            <a class="btn-salir" href="../../index.html">
+                <div class="boton1">
+                    <iconify-icon icon="humbleicons:logout" style="font-size: 24px;"></iconify-icon>
+                    <p class="titulo2">Cerrar Sesión</p>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Contenedor del Navegador -->
+        <div class="barra-navegacion">
+            
+            <!-- Creación del Buscador -->
+            <div class="buscador">
+                <iconify-icon icon="material-symbols:search-rounded" style="font-size: 24px;"></iconify-icon>
+                <input type="search" name="buscar" placeholder="Buscar...">
+            </div>
+
+            <!-- Creación del Calendario -->
+            <div class="calendario">
+                <iconify-icon icon="radix-icons:calendar" style="font-size: 24px;"></iconify-icon>
+                <input type="date" name="fecha_inicial" >
+                <p>-</p>
+                <input type="date" name="fecha_final" >
+            </div>
+
+            <!-- Creación de las notificaciones -->
+            <div class="notifiacion">
+                <iconify-icon icon="ion:notifications-outline" style="font-size: 27px;"></iconify-icon>
+            </div>
+
+            <!-- Creación del boton para el panel de cuenta -->
+            <div class="cuenta">
+                <img src="../../images/admin/cuenta.jpg" alt="Cuenta">
+            </div>
+
+        </div>
+
+        <!-- Contenedor de Botones y Filtrados -->
+        <div class="opciones">
+
+            <!-- Boton para agregar una nueva mascota -->
+            <button class="agregar">
+                <iconify-icon icon="material-symbols:add-circle-outline-rounded" style="font-size: 20px;"></iconify-icon>
+                Nueva Mascota
+            </button>
+
+            <!-- Menú desplegable para elegir el filtrado por tipo de mascota -->
+            <select name="tipo" id="tipo">
+                <option disabled selected>Tipo de Animal</option>
+                <option value=1>Mamífero</option>
+                <option value=2>Ave</option>
+                <option value=3>Pez</option>
+                <option value=4>Anfibio</option>
+                <option value=5>Reptil</option>
+            </select>
+
+            <!-- Menú desplegable para elegir el filtrado por la edad de las mascotas -->
+            <select name="edad" id="edad">
+                <option disabled selected>Edad</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+            
+            <!-- Menú desplegable para elegir el filtrado por tiempo de edad de las mascotas -->
+            <select name="tiempo" id="tiempo">
+                <option disabled selected>Tiempo</option>
+                <option value="D">Días</option>
+                <option value="M">Meses</option>
+                <option value="A">Años</option>
+            </select>
+
+            <!-- Menú desplegable para elegir el filtrado por el sexo de la mascotas -->
+            <select name="sexo" id="sexo">
+                <option disabled selected>Sexo</option>
+                <option value="M">Macho</option>
+                <option value="H">Hembra</option>
+            </select>
+
+            <!-- Boton para eliminar una o varias mascotas -->
+            <button class="eliminar">
+                <iconify-icon icon="ic:round-delete-outline" style="font-size: 20px;"></iconify-icon>
+                Eliminar
+            </button>
+        </div>
+
+        <div class="contenedor">
+            <div class="tabla">
+                <table>
+                    <!-- Creación de la cabecera de la tabla -->
+                    <tr>
+                        <th class="id">#</th>
+                        <th class="espacio-columnas"></th>
+                        <th class="nombre">Nombre</th>
+                        <th class="espacio-columnas"></th>
+                        <th class="tipo">Tipo</th>
+                        <th class="espacio-columnas"></th>
+                        <th class="edad">Edad</th>
+                        <th class="espacio-columnas"></th>
+                        <th class="tiempo">Tiempo</th>
+                        <th class="espacio-columnas"></th>
+                        <th class="sexo">Sexo</th>
+                        <th class="espacio-columnas"></th>
+                        <th>Descripción</th>
+                        <th class="espacio-columnas"></th>
+                        <th class="adoptante">Adoptante</th>
+                        <th class="espacio-columnas"></th>
+                        <th class="fecha">Fecha Adopción</th>
+                        <th class="espacio-columnas"></th>
+                        <th class="accion">Acción</th>
+                    </tr>
+        
+                    <!-- Creación de una fila vacía -->
+                    <tr class="espacio-filas"></tr>
+        
+                    <!-- Creación de la fila de la tabla -->
+                    <tr>
+                        <!-- Creación de las diferentes celdas que hacen referencia a la columna que pertenecen -->
+                        <td class="id">01</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="nombre">Bella</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="tipo">Mamífero</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="edad">2</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="tiempo">Años</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="sexo">Hembra</td>
+                        <td class="espacio-columnas"></td>
+                        <td>
+                            Conoce a Bella, una mezcla de pastor alemán de 2 años. Bella es una perra juguetona y enérgica a la que le encanta dar largos paseos y correr por el parque. También es muy inteligente y le encanta aprender nuevos trucos, lo que la convierte en una excelente candidata para el entrenamiento de obediencia. Bella es muy cariñosa y le encanta acurrucarse con su familia, pero al principio puede ser tímida con las personas nuevas. Se lleva bien con otros perros y le iría bien en una casa con otro compañero peludo. Bella ya está entrenada en el hogar y conoce los comandos básicos. Está al día con todas sus vacunas y está esterilizada. Bella está buscando una familia amorosa y activa que pueda brindarle la atención y el ejercicio que necesita. Ella será una maravillosa adición a cualquier familia
+                        </td>
+                        <td class="espacio-columnas"></td>
+                        <td class="adoptante">Ninguno</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="fecha">dd/mm/aaaa</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="accion">
+                            <button class="editar">
+                                <iconify-icon icon="material-symbols:edit-outline-rounded" style="font-size: 20px;"></iconify-icon>
+                                Editar
+                            </button>
+                        </td>
+                    </tr>
+        
+                    <tr class="espacio-filas"></tr>
+
+                    <tr>
+                        <td class="id">02</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="nombre">Silvestre</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="tipo">Mamífero</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="edad">1</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="tiempo">Años</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="sexo">Macho</td>
+                        <td class="espacio-columnas"></td>
+                        <td>
+                            Conoce a Silvestre, un gato doméstico de pelo corto de 1 año. Silvestre es un gato amistoso y juguetón al que le encanta pasar el tiempo persiguiendo juguetes y descansando al sol. Tiene un hermoso pelaje gris y blanco que es suave al tacto y seguramente lo mantendrá abrigado en las noches frías. Silvestre es un gato independiente, pero también disfruta de la compañía humana, le encanta que lo acaricien y se acerca mucho a su humano. Está en camada, al día con todas sus vacunas y castrado. Silvestre está buscando una familia amorosa que le brinde mucho tiempo para jugar y amor. Le iría bien en un hogar con o sin otros gatos, y sería un gran compañero para alguien que busca una mascota de bajo mantenimiento
+                        </td>
+                        <td class="espacio-columnas"></td>
+                        <td class="adoptante">Ana López</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="fecha">20/01/2023</td>
+                        <td class="espacio-columnas"></td>
+                        <td class="accion">
+                            <button class="editar">
+                                <iconify-icon icon="material-symbols:edit-outline-rounded" style="font-size: 20px;"></iconify-icon>
+                                Editar
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
