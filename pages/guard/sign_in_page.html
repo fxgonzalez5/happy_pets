@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titulo de la pestaña -->
+    <title>HappyPets</title>
+
+    <!-- Carga del logo en la pestaña -->
+    <link rel="icon" href="../../images/logo.png" sizes="32x32" />
+    <link rel="icon" href="../../images/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../../images/logo.png" />
+
+    <!-- Carga de estilos -->
+    <link rel="stylesheet" type="text/css" href="../../css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/sign_in_style.css">
+
+    <!-- Importación de tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    
+    <!-- Importación de librería de iconos -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+
+</head>
+
+<body>
+    <div class="contenido">
+
+        <!-- contenedor de la tarjeta -->
+        <div class="tarjeta">
+
+            <!-- imagen de la tarjeta de la parte izquierda -->
+            <div class="imagen-tarjeta">
+                <img src="../../images/guard/img_signin.jpg">
+            </div>
+
+            <!-- corte del cuadro blanco a la imagen -->
+            <div class="corte"></div>
+
+            <!-- parte izquierda de la tarjeta -->
+            <form class="formulario" action="">
+
+                <!-- título de la tarjeta y logo de la pagina -->
+                <div class="superior">
+                    <p class="titulo">REGISTRARSE</p>
+                    <img src="../../images/logo_happy_pets.png" alt="Logo Happy Pets"> 
+                </div>
+                
+                <!-- cajas de texto -->
+                <div class="fila">
+                    <div class="datocorto">
+                        <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="p.ej. Kevin" required>
+                    </div>
+
+                    <div class="datocorto">
+                        <label for="apellido">Apellido <span class="obligatorio">*</span></label>
+                        <input type="text" id="apellido" name="apellido" placeholder="p.ej. Cabrera" required>
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="datocorto">
+                        <label for="usuario">Nombre de Usuario</label>
+                        <input type="text" id="usuario" name="usuario" placeholder="p.ej. krcabrera3">
+                    </div>
+
+                    <div class="datocorto">
+                        <label for="genero">Género</label>
+                        <select id="genero" name="genero">
+                            <option disabled selected>Seleccione su género</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="datolargo">
+                    <label for="correo">Correo Electrónico <span class="obligatorio">*</span></label>
+                    <input type="email" id="correo" name="correo" placeholder="p.ej. krcabrera3@hotmail.com" required>
+                </div>
+                
+                <div class="fila">
+                    <div class="datocorto">
+                        <label for="contrasenia">Contraseña <span class="obligatorio">*</span></label>
+                        <input type="password" id="contrasenia" name="contrasenia" placeholder="Mínimo 8 caractéres" required>
+                    </div>
+
+                    <div class="datocorto">
+                        <label for="rep_contrasenia">Confirmar Contraseña <span class="obligatorio">*</span></label>
+                        <input type="password" id="rep_contrasenia" name="rep_contrasenia" placeholder="Repite la contraseña" required>
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="datocorto">
+                        <label for="celular">Número de Celular <span class="obligatorio">*</span></label>
+                        <input type="tel" id="celular" name="celular" placeholder="p.ej. +593 999999999" required>
+                    </div>
+
+                    <div class="datocorto">
+                        <label for="fecha">Fecha de Nacimiento <span class="obligatorio">*</span></label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                </div>
+
+                <!-- botones para cancelar y confirmar el registro -->
+                <div class="inferior">
+                    <button type="reset" onclick="window.location.href='../../index.html'">Cancelar</button>
+                    <button>Confirmar</button>
+                </div>
+                
+                <!-- celular y correo de contacto -->
+                <div class="medios-contacto">
+                    <div class="contacto">
+                        <iconify-icon icon="fluent:phone-20-regular" style="font-size: 30px;"></iconify-icon>
+                        <a href="https://wa.me/593999999999">+593 999999999</a>
+                    </div>
+
+                    <div class="contacto">
+                        <iconify-icon icon="mdi-light:email" style="font-size: 30px;"></iconify-icon>
+                        <a href="mailto:happypets@gmail.com">happypets@gmail.com</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

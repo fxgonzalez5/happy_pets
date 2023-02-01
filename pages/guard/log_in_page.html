@@ -1,31 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   <!-- Titulo de la pestaña -->
-   <title>HappyPets</title>
-    
-   <!-- Carga del logo en la pestaña -->
-   <link rel="icon" href="../../images/logo.png" sizes="32x32" />
-   <link rel="icon" href="../../images/logo.png" sizes="192x192" />
-   <link rel="apple-touch-icon" href="../../images/logo.png" />
-   
-   <!-- Carga de estilos -->
-   <link rel="stylesheet" type="text/css" href="../../css/global_style.css">
-   <link rel="stylesheet" type="text/css" href="../../css/log_in_style.css">
-   
-   <!-- Importación de tipografía -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
 
+    <!-- Titulo de la pestaña -->
+    <title>HappyPets</title>
+
+    <!-- Carga del logo en la pestaña -->
+    <link rel="icon" href="../../images/logo.png" sizes="32x32" />
+    <link rel="icon" href="../../images/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../../images/logo.png" />
+
+    <!-- Carga de estilos -->
+    <link rel="stylesheet" type="text/css" href="../../css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/log_in_style.css">
+
+    <!-- Importación de tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    
+    <!-- Importación de librería de iconos -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 
 </head>
+
 <body>
-    <div class="tarjeta">
+    <div class="contenido">
+        <!-- contenedor de la tarjeta -->
+        <div class="tarjeta">
+
+            <!-- corte del cuadro blanco a la imagen -->
+            <div class="corte"></div>
+
+            <!-- parte izquierda de la tarjeta -->
+            <form class="formulario" action="">
+
+                <!-- título de la tarjeta -->
+                <p class="titulo">BIENVENIDO/A</p>
+
+                <!-- logo de la página -->
+                <img src="../../images/logo_happy_pets.png" alt="Logo Happy Pets"> 
+                
+                <!-- cajas de texto -->
+                <div class="credencial">
+                    <iconify-icon icon="mingcute:user-3-line" style="font-size: 40px;"></iconify-icon>
+                    <input type="text" name="usuario-correo" placeholder="Usuario o Correo Electrónico" required>
+                </div>
+
+                <div class="credencial">
+                    <iconify-icon icon="material-symbols:lock-outline" style="font-size: 40px;"></iconify-icon>
+                    <input type="password" name="contrasena" placeholder="Contraseña" required>
+                </div>
+                
+                <!-- recuperación de contraseña e inicio de sesión -->
+                <div class="inferior">
+                    <div class="enlaces">
+                        <a href="recover_password_page.html">¿Has olvidado tu contraseña?</a>
+                        <div class="registrarse">
+                            <p>¿No tienes cuenta?</p>
+                            <a class="pregunta" href="sign_in_page.html">Registrate</a>
+                        </div>
+                    </div>
+            
+                    <button>Iniciar Sesión</button>
+                </div>
+
+                <!-- botones para iniciar con alguna cuenta existente -->
+                <div class="botones">
+                    <div class="boton">
+                        <iconify-icon icon="logos:facebook" style="color: #00aae4; font-size: 40px;"></iconify-icon>
+                        <p>Facebook</p>
+                    </div>
+    
+                    <div class="boton">
+                      <iconify-icon icon="logos:google-icon" style="color: #00aae4; font-size: 40px;"></iconify-icon>
+                       <p>Google</p> 
+                    </div>
+                </div>
+            </form>
+
+            <!-- imagen de la tarjeta de la parte derecha -->
+            <div class="imagen-tarjeta">
+                <img src="../../images/guard/img_login.jpg">
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
