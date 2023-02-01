@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="/css/postulacion_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+    <div class="contededor">
+        <main>
+            <h2>Formulario de Adopción</h2>
+            <form method="post" action="procesar.php">
+                <div class="grupoinput">
+                    <label for="nombres">Nombres <samp class="rojo">*</samp></label>
+                    <input type="text" name="nombres" placeholder="Ingrese sus nombres" required>
+                </div>
+                <div class="grupoinput">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" placeholder="Ingrese sus Apellidos">
+                </div>
+                <div class="grupoinput">
+                    <label for="correo">Correo</label>
+                    <input type="text" name="correo" placeholder="Ingrese su Correo">
+                </div>
+                <div class="grupoinput">
+                    <label for="cedula">Cedula <samp class="rojo">*</samp></label>
+                    <input type="number" name="cedula" placeholder="Ingrese su cedula">
+                </div>
+                <div class="grupoinput">
+                    <label for="direccion">Direccion</label>
+                    <input type="text" name="direccion" placeholder="Ingrese sus nombres">
+                </div>
+                <div class="grupoinput">
+                    <label for="fechanacimiento">Fecha Nacimiento</label>
+                    <input type="date" id="fechanacimiento" name="fechanacimiento" placeholder="Ingrese su Fecha de Nacimiento">
+                </div>
+                <div class="grupoinput">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" name="telefono" placeholder="Ingrese sus Telefono">
+                </div>
+                <button type="submit" class="button ">Guardar Datos</button>
+            </form>
+        </main>
+        <section class="sponsor">
+            <img class="img1" src="/images/home/logo UTPL.png" >
+            <img  class="img2" src="/images/home/logo Municipio.png" >
+        </section>
+       
+        <footer class="piePagina">
+            <section class="Derechos">
+                <h6>Derechos Reservados UTPL 2023</h6>
+            </section>
+            <nav class="redes">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </nav>
+        </footer>
+
+    </div>
+    
+</body>
+</html>

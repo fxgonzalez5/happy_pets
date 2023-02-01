@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+.contenedor{
+    width: 100%;
+}
+header{
+    
+    width: 100%;
+    height: 550px;
+    background-image: url("../images/descripcion/image1.png");
+}
+.ancho{
+    width: 80%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 30%;
+    height: 70px;
+    float: left;
+    padding-top: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+.logo img{
+    position: absolute;
+    width: 93px;
+    height: 87.33px;
+    left: 29px;
+    top: 16px;
+    transform: all 0.3s;
+}
+.log img:hover{
+    transform: scale(1.2);
+}
+
+nav{
+    width: 40%;
+    height: 70px;
+    float: left;
+    text-align: center;
+    padding-top: 24px;
+    box-sizing: border-box;
+}
+nav ul li{
+    display: inline;
+    
+}
+nav ul li a{
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: Nunito; 
+}
+nav ul li a:hover{
+    color: #5799E3;
+}
+.Principal h2{
+    position: absolute;
+    width: 302px;
+    height: 44px;
+    left: 569px;
+    top: 658px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FF9054;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.adoption1 img{
+    position: absolute;
+    width: 483px;
+    height: 437px;
+    left: 52px;
+    top: 860px;
+
+    background:  rgba(245, 184, 184, 0.63);
+}
+.adoption1 .Informacion p{
+    position: absolute;
+    width: 605px;
+    height: 371px;
+    left: 633px;
+    top: 907px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+.contenido{
+    position: absolute;
+width: 883px;
+height: 536px;
+left: 338px;
+top: 1348px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.contenido .c1{
+    position: absolute;
+width: 47px;
+height: 24px;
+left: 200px;
+top: 50px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+}
+.contenido .c2{
+    position: absolute;
+    width: 48px;
+    height: 33px;
+    left: 200px;
+    top: 150px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+.contenido .c3{
+    position: absolute;
+    width: 79px;
+    height: 24px;
+    left: 200px;
+    top: 250px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+.boton{
+    position: absolute;
+width: 221px;
+height: 61px;
+left: 704px;
+top: 1980px;
+
+}
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #E28F2D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+.button:hover {background-color: #3e8e41}
+  
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}    
+.sponsor{
+    position: absolute;
+    width: 100%;
+    height: 202.84px;
+    left: 0px;
+    top: 2221.16px;
+
+    background: rgba(154, 154, 154, 0.53);
+    display: flex;
+    justify-content: space-between;
+}
+.sponsor .img1{
+    position: absolute;
+    width: 335px;
+    height: 104px;
+    top: 30px;
+    left: 60px;
+    cursor: pointer;
+
+}
+.sponsor .img2{
+    position: absolute;
+    width: 335px;
+    height: 104px;
+    top: 30px;
+    left: 940px;
+    cursor: pointer;
+
+}
+.piePagina{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 2422px;
+
+    background: #9A9A9A;
+    display: flex;
+	justify-content: space-between;
+}
+
+.piePagina .Derechos h6{
+    position: absolute;
+    width: 297px;
+    height: 27px;
+    left: 48px;
+    top: 50px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.piePagina .redes{
+    padding: 2em;
+	font-size: 25px;
+    
+}
+.piePagina .redes a{
+	color: #fff;
+	padding: 0 10px;
+	text-decoration: none;
+   
+}

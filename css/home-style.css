@@ -1,0 +1,427 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+
+header{
+   
+    width: 100%;
+    height: 550px;
+    background-image: url("../images/home/image1.png");
+}
+.ancho{
+    width: 80%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 30%;
+    height: 70px;
+    float: left;
+    padding-top: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+.logo img{
+    position: absolute;
+    width: 93px;
+    height: 87.33px;
+    left: 29px;
+    top: 16px;
+    transform: all 0.3s;
+}
+.log img:hover{
+    transform: scale(1.2);
+}
+
+nav{
+    width: 40%;
+    height: 70px;
+    float: left;
+    text-align: center;
+    padding-top: 24px;
+    box-sizing: border-box;
+}
+nav ul li{
+    display: inline;
+    
+}
+nav ul li a{
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: Nunito; 
+}
+nav ul li a:hover{
+    color: #5799E3;
+}
+.botones{
+    height: 70px;
+    text-align: right;
+    padding-top: 24px;
+    box-sizing: border-box;
+}
+.botones a{
+    color: white;
+    text-decoration: none;
+    padding: 4px 20px;
+    border-radius: 20px;
+    margin: 5px;
+
+
+}
+.botones .bt{
+    background: #5799E3;
+}
+.botones .b{
+    background: #FF9054;
+}
+.contenedor{
+    width: 100%;
+}
+
+.contenedor .Principal h2{
+    position: absolute;
+    width: 433.94px;
+    height: 66px;
+    left: 450px;
+    top: 639px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48.4398px;
+    line-height: 66px;
+
+    text-align: center;
+
+}
+.slider .ma {
+    position: absolute;
+    width: 263px;
+    height: 282px;
+    left: 189px;
+    top: 742px;
+    cursor: pointer;
+
+}
+
+.slider .mas{
+    position: absolute;
+    width: 263px;
+    height: 282px;
+    left: 574px;
+    top: 742px;
+    cursor: pointer;
+}
+.slider .masc{
+    position: absolute;
+    width: 263px;
+    height: 282px;
+    left: 959px;
+    top: 742px;
+    cursor: pointer;
+}
+.slider img{
+    transition: 0.5s;
+}
+.slider img:hover{
+    transform: scale(1.2);
+}
+.slider2 h3{
+    position: absolute;
+    width: 412.75px;
+    height: 54.49px;
+    left: 500px;
+    top: 1097px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 55px;
+}
+.slider2 .ind1{
+    position: absolute;
+    width: 96px;
+    height: 109px;
+    left: 122px;
+    top: 1176px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 109px;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.slider2 .ind2{
+    position: absolute;
+    width: 96px;
+    height: 109px;
+    left: 466px;
+    top: 1167px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 109px;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.slider2 .ind3{
+    position: absolute;
+    width: 48px;
+    height: 109px;
+    left: 810px;
+    top: 1176px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 109px;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.slider2 .ind4{
+    position: absolute;
+    width: 96px;
+    height: 109px;
+    left: 1154px;
+    top: 1176px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 109px;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text1{
+    position: absolute;
+    width: 185px;
+    height: 54.49px;
+    left: 114px;
+    top: 1295px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36.3299px;
+    line-height: 50px;
+
+}
+.text2{
+    position: absolute;
+    width: 241px;
+    height: 54px;
+    left: 433px;
+    top: 1312px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36.3299px;
+    line-height: 50px;
+}
+.text3{
+    position: absolute;
+    width: 164px;
+    height: 54px;
+    left: 777px;
+    top: 1305px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36.3299px;
+    line-height: 50px;
+}
+.text4{
+    position: absolute;
+    width: 192px;
+    height: 54px;
+    left: 1134px;
+    top: 1322px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36.3299px;
+    line-height: 50px;
+}
+.process h3{
+    position: absolute;
+    width: 377px;
+    height: 55px;
+    left: 541px;
+    top: 1561px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 55px;
+
+    display: flex;
+    align-items: center;
+}
+.process .post{
+    position: absolute;
+    width: 100%;
+    height: 526px;
+    left: 0px;
+    top: 1696px;
+    background: #FF9054;
+}
+.process .post .nu1{
+    position: absolute;
+    width: 30px;
+    height: 66px;
+    left: 238.14px;
+    top: 10px;
+}
+.process .post .nu2{
+    position: absolute;
+    width: 30px;
+    height: 66px;
+    left: 734.64px;
+    top: 10px;
+}
+.process .post .nu3{
+    position: absolute;
+    width: 30px;
+    height: 66px;
+    left: 1250.33px;
+    top: 10px;
+}
+.post .pos1{
+    position: absolute;
+    width: 339.08px;
+    height: 307.79px;
+    left: 67px;
+    top: 100px;
+}
+.post .pos2{
+    position: absolute;
+    width: 339.08px;
+    height: 307.79px;
+    left: 569.14px;
+    top: 100px;
+}
+.post .pos3{
+    position: absolute;
+    width: 339.08px;
+    height: 307.79px;
+    left: 1052.53px;
+    top: 100px;
+}
+.post .te1{
+    position: absolute;
+    width: 264px;
+    height: 28px;
+    left: 106px;
+    top: 450px;
+}
+.post .te2{
+    position: absolute;
+    width: 438px;
+    height: 28px;
+    left: 544.92px;
+    top: 450px;
+
+}
+.post .te3{
+    position: absolute;
+    width: 235px;
+    height: 28px;
+    left: 1125px;
+    top: 450px;
+
+}
+.sponsor{
+    position: absolute;
+    width: 100%;
+    height: 202.84px;
+    left: 0px;
+    top: 2221.16px;
+
+    background: rgba(154, 154, 154, 0.53);
+    display: flex;
+    justify-content: space-between;
+}
+.sponsor .img1{
+    position: absolute;
+    width: 335px;
+    height: 104px;
+    top: 30px;
+    left: 60px;
+    cursor: pointer;
+
+}
+.sponsor .img2{
+    position: absolute;
+    width: 335px;
+    height: 104px;
+    top: 30px;
+    left: 940px;
+    cursor: pointer;
+
+}
+.piePagina{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 2422px;
+
+    background: #9A9A9A;
+    display: flex;
+	justify-content: space-between;
+}
+.piePagina .Derechos h6{
+    position: absolute;
+    width: 297px;
+    height: 27px;
+    left: 48px;
+    top: 50px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.piePagina .redes{
+    padding: 2em;
+	font-size: 25px;
+    
+}
+.piePagina .redes a{
+	color: #fff;
+	padding: 0 10px;
+	text-decoration: none;
+   
+}
