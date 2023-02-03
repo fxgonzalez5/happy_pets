@@ -37,7 +37,7 @@
             <div class="corte"></div>
 
             <!-- parte izquierda de la tarjeta -->
-            <form class="formulario" action="">
+            <form class="formulario" method="post" action="../../php/functions/log_in.php">
 
                 <!-- título de la tarjeta -->
                 <p class="titulo">BIENVENIDO/A</p>
@@ -53,7 +53,7 @@
 
                 <div class="credencial">
                     <iconify-icon icon="material-symbols:lock-outline" style="font-size: 40px;"></iconify-icon>
-                    <input type="password" name="contrasena" placeholder="Contraseña" required>
+                    <input type="password" name="contrasenia" placeholder="Contraseña" required>
                 </div>
                 
                 <!-- recuperación de contraseña e inicio de sesión -->
@@ -66,7 +66,7 @@
                         </div>
                     </div>
             
-                    <button>Iniciar Sesión</button>
+                    <button type="submit">Iniciar Sesión</button>
                 </div>
 
                 <!-- botones para iniciar con alguna cuenta existente -->
@@ -87,6 +87,7 @@
             <div class="imagen-tarjeta">
                 <img src="../../images/guard/img_login.jpg">
             </div>
+
         </div>
     </div>
 </body>

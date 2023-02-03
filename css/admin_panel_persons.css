@@ -135,7 +135,7 @@ body {
 .barra-navegacion .cuenta {
     width: 40px;
     height: 40px;
-    margin-left: 15px;
+    margin-left: auto;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -291,6 +291,116 @@ body {
      cursor: pointer;
 }
 
+/* ------------------   
+    Ventana Flotante    
+   ------------------ */
+
+/* Estilos de la ventana flotante */
+#ventana, #ventana-n, #ventana-e {
+    width: 50%;
+    height: 75%;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ventana::backdrop, #ventana-n::backdrop, #ventana-e::backdrop{
+    background-color: rgba(154, 154, 154, .8);
+}
+
+#ventana .cuadro, #ventana-n .cuadro, #ventana-e .cuadro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ventana .cuadro .formulario, #ventana-n .cuadro .formulario, #ventana-e .cuadro .formulario {
+    width: 75%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#ventana .formulario #cerrar, #ventana-n .formulario #cerrar-n, #ventana-e .formulario #cerrar-e {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+#ventana .formulario .fila, #ventana-n .formulario .fila, #ventana-e .formulario .fila {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#ventana .formulario .fila .datocorto, #ventana-n .formulario .fila .datocorto, #ventana-e .formulario .fila .datocorto {
+    width: 35%;
+    text-align: left;
+ }
+
+ #ventana .formulario .datolargo, #ventana-n .formulario .datolargo, #ventana-e .formulario .datolargo {
+    width: 75%;
+    text-align: center;
+ }
+
+#ventana .formulario label, #ventana-n .formulario label, #ventana-e .formulario label {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: #9A9A9A;
+}
+ 
+#ventana .formulario input, #ventana-n .formulario input, #ventana-e .formulario input, #ventana .formulario select, #ventana-n .formulario select, #ventana-e .formulario select {
+    width: 100%;
+    height: 35px;
+    padding: 0px 10px;
+    outline: none;
+    border: 2px solid #9A9A9A;
+    border-radius: 10px;
+    background:none;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+#ventana-n .formulario input:hover, #ventana-e .formulario input:hover, #ventana-n .formulario select:hover, #ventana-e .formulario select:hover {
+    border: 2px solid #FF9054;
+}
+
+#ventana-n .formulario .guardar-n, #ventana-e .formulario .guardar-e{
+    width: 20%;
+    height: 40px;
+
+    margin-top: 30px;
+    
+    /* Diseño */
+    background-color: #5799E3;
+    border: none;
+    border-radius: 5px;
+
+    /* Estilo de letra */
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+
+    /* Comportamiento */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+}
 
 /* ------------------------   
     Estilos Personalizados    
@@ -309,6 +419,13 @@ body {
     font-size: 16px;
     font-weight: bold;
     margin-left: 15px;
+}
+
+/* Estilo del título de la ventana flotante */
+.titulo3 {
+    font-size: 36px;
+    font-weight: bold;
+    /* margin-left: 15px; */
 }
 
 
@@ -355,6 +472,7 @@ tr, td {
      text-align: center;
      border-radius: 5px;
      border: 3px solid #F2F2F2;
+     background-color: white;
  
      /* Comportamiento */
      white-space: nowrap;
@@ -404,3 +522,9 @@ tr, td {
     background: none;
     border: none !important;
 }
+
+/* Estilo para una fila seleccionada */
+.seleccionada {
+    background-color: lightgray;
+    border: none;
+  }  

@@ -140,7 +140,7 @@ body {
 .barra-navegacion .cuenta {
     width: 40px;
     height: 40px;
-    margin-left: 15px;
+    margin-left: auto;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -361,6 +361,7 @@ tr, td {
      text-align: center;
      border-radius: 5px;
      border: 3px solid #F2F2F2;
+     background-color: white;
  
      /* Comportamiento */
      white-space: nowrap;
@@ -410,3 +411,9 @@ tr, td {
     background: none;
     border: none !important;
 }
+
+/* Estilo para una fila seleccionada */
+.seleccionada {
+    background-color: lightgray;
+    border: none;
+  }  

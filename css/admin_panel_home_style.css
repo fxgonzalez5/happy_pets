@@ -162,7 +162,7 @@ body {
 .barra-navegacion .cuenta {
     width: 40px;
     height: 40px;
-    margin-left: 15px;
+    margin-left: auto;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -316,8 +316,14 @@ body {
     color: white;
 }
 
-/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Completado' */
-.tarjeta-postulantes .completado {
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Activa' */
+.tarjeta-postulantes .activa {
+    background-color: #FFD954;
+    border: 1px solid #FFD954;
+}
+
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Completada' */
+.tarjeta-postulantes .completada {
     background-color: #5799E3;
     border: 3px solid #5799E3;
 }
@@ -329,7 +335,7 @@ body {
 }
 
 /* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Cancelado' */
-.tarjeta-postulantes .cancelado {
+.tarjeta-postulantes .cancelada {
     background-color: #9A9A9A;
     border: 1px solid #9A9A9A;
 }
@@ -374,8 +380,8 @@ body {
 }
 
 /* Asignación del tamaño que ocuparán las celdas de la columna que contienen la fecha de nacimiento del usuario */
-.tarjeta-inferior .fecha {
-    width: 15%;
+.tarjeta-inferior .edad {
+    width: 5%;
 }
 
 /* Asignación del tamaño que ocuparán las celdas de la columna que contienen el correo electrónico del usuario 
@@ -416,7 +422,6 @@ y la descripción de la mascota*/
     margin-top: auto;
     margin-left: auto;
     color: #9A9A9A;
-    text-decoration: underline;
 }
 
 /* Estilo de texto a los títulos de los campos que se mostrarán del usuario  */

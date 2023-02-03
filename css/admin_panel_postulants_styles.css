@@ -129,18 +129,18 @@ body {
 }
 
 /* Posicionamiento al boton de las notificaciones */
-.barra-navegacion .notifiacion {
+/* .barra-navegacion .notifiacion {
     margin-left: auto;
     position: relative;
     display: flex;
     align-items: center;
-}
+} */
 
 /* Creación del boton de las opciones de la cuenta */
 .barra-navegacion .cuenta {
     width: 40px;
     height: 40px;
-    margin-left: 15px;
+    margin-left: auto;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -285,8 +285,16 @@ body {
     flex-direction: column;
 }
 
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Activa' */
+.tabla .activa {
+    background-color: #FFD954;
+    border: 1px solid #FFD954;
+    font-weight: 600;
+    color: white;
+}
+
 /* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Completado' */
-.tabla .completado {
+.tabla .completada {
     background-color: #5799E3;
     border: 3px solid #5799E3;
     font-weight: 600;
@@ -302,7 +310,7 @@ body {
 }
 
 /* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Cancelado' */
-.tabla .cancelado {
+.tabla .cancelada {
     background-color: #9A9A9A;
     border: 1px solid #9A9A9A;
     font-weight: 600;
@@ -373,6 +381,7 @@ tr, td {
      text-align: center;
      border-radius: 5px;
      border: 3px solid #F2F2F2;
+     background-color: white;
  
      /* Comportamiento */
      white-space: nowrap;
@@ -425,3 +434,9 @@ tr, td {
     background: none;
     border: none !important;
 }
+
+/* Estilo para una fila seleccionada */
+.seleccionada {
+    background-color: lightgray;
+    border: none;
+  }  
