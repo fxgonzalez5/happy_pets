@@ -4,15 +4,16 @@
 }
 .contenedor{
     width: 100%;
+    background: #F2F2F2;
 }
 header{
     
     width: 100%;
-    height: 550px;
-    background-image: url("../images/descripcion/image1.png");
+    height: 120px;
+    background: #9A9A9A;
 }
 .ancho{
-    width: 80%;
+    width: 100%;
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -53,7 +54,7 @@ nav ul li{
 }
 nav ul li a{
     color: #fff;
-    font-size: 13px;
+    font-size: 20px;
     text-decoration: none;
     text-transform: uppercase;
     padding-left: 15px;
@@ -64,112 +65,211 @@ nav ul li a{
 nav ul li a:hover{
     color: #5799E3;
 }
+.Principal{
+    position: absolute;
+    width: 1304px;
+    height: 1100px;
+    left: 80px;
+    top: 164px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
 .Principal h2{
     position: absolute;
-    width: 302px;
-    height: 44px;
-    left: 569px;
-    top: 658px;
+    width: 407px;
+    height: 58px;
+    left: 466px;
+    top: 60px;
 
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 44px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
     /* identical to box height */
 
     text-align: center;
 
-    color: #FF9054;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #5799E3;
 }
 .adoption1 img{
     position: absolute;
-    width: 483px;
-    height: 437px;
-    left: 52px;
-    top: 860px;
+width: 400px;
+height: 400px;
+left: 120px;
+top: 322px;
 
     background:  rgba(245, 184, 184, 0.63);
 }
 .adoption1 .Informacion p{
     position: absolute;
-    width: 605px;
-    height: 371px;
-    left: 633px;
-    top: 907px;
+    width: 1236px;
+    height: 178px;
+    left: 120px;
+    top: 808px;
 
-    font-family: 'Inter';
+    font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-
-    color: #000000;
-}
-.contenido{
-    position: absolute;
-width: 883px;
-height: 536px;
-left: 338px;
-top: 1348px;
-
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-}
-.contenido .c1{
-    position: absolute;
-width: 47px;
-height: 24px;
-left: 200px;
-top: 50px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
-
-color: #000000;
-}
-.contenido .c2{
-    position: absolute;
-    width: 48px;
-    height: 33px;
-    left: 200px;
-    top: 150px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-
-    color: #000000;
-}
-.contenido .c3{
-    position: absolute;
-    width: 79px;
-    height: 24px;
-    left: 200px;
-    top: 250px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 26px;
+    line-height: 35px;
 
     color: #000000;
 }
 
+.adoption1 .Informacion .c1{
+    position: absolute;
+    width: 66px;
+    height: 44px;
+    left: 600px;
+    top: 324px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+.adoption1 .Informacion .c2{
+    position: absolute;
+    width: 74px;
+    height: 44px;
+    left: 600px;
+    top: 436px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+.adoption1 .Informacion .c3{
+    position: absolute;
+    width: 72px;
+    height: 44px;
+    left: 600px;
+    top: 548px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+.adoption1 .Informacion .c4{
+    position: absolute;
+    width: 100px;
+    height: 44px;
+    left: 600px;
+    top: 655px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+.adoption1 .Informacion .c5{
+    position: absolute;
+    width: 128px;
+    height: 41px;
+    left: 800px;
+    top: 368px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+.adoption1 .Informacion .c6{
+    position: absolute;
+    width: 82px;
+    height: 41px;
+    left: 800px;
+    top: 480px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+.adoption1 .Informacion .c7{
+    position: absolute;
+    width: 90px;
+    height: 41px;
+    left: 800px;
+    top: 589px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+.adoption1 .Informacion .c8{
+    position: absolute;
+    width: 161px;
+    height: 41px;
+    left: 800px;
+    top: 679px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
 .boton{
     position: absolute;
-width: 221px;
-height: 61px;
-left: 704px;
-top: 1980px;
+    width: 221px;
+    height: 61px;
+    left: 704px;
+    top: 1150px;
 
 }
 .button {
@@ -197,11 +297,11 @@ top: 1980px;
 .sponsor{
     position: absolute;
     width: 100%;
-    height: 202.84px;
+    height: 160px;
     left: 0px;
-    top: 2221.16px;
+    top: 1300px;
 
-    background: rgba(154, 154, 154, 0.53);
+background: #5799E3;
     display: flex;
     justify-content: space-between;
 }
@@ -226,21 +326,22 @@ top: 1980px;
 .piePagina{
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 50px;
     left: 0px;
-    top: 2422px;
+    top: 1460px;
 
-    background: #9A9A9A;
+    background: #FF9054;
     display: flex;
 	justify-content: space-between;
 }
 
 .piePagina .Derechos h6{
     position: absolute;
-    width: 297px;
-    height: 27px;
-    left: 48px;
-    top: 50px;
+    width: 490px;
+    height: 50px;
+    left: 41px;
+    top: 5px;
+
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
@@ -248,17 +349,21 @@ top: 1980px;
     line-height: 27px;
     display: flex;
     align-items: center;
+
     color: #FFFFFF;
 }
 
 .piePagina .redes{
-    padding: 2em;
+    padding: 12px 12px 12px  10px;
 	font-size: 25px;
     
 }
 .piePagina .redes a{
 	color: #fff;
-	padding: 0 10px;
-	text-decoration: none;
-   
+	padding: 12px;
+	text-decoration: none;  
+    width: 238px;
+    height: 35.36px;
+    top: 5px;
+    padding-left: 10px;
 }

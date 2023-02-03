@@ -2,15 +2,17 @@
    margin: 0;
    padding: 0; 
 }
+body{
+    background:#F2F2F2; 
+}
 
 header{
-   
     width: 100%;
     height: 550px;
     background-image: url("../images/home/image1.png");
 }
 .ancho{
-    width: 80%;
+    width: 100%;
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -51,7 +53,7 @@ nav ul li{
 }
 nav ul li a{
     color: #fff;
-    font-size: 13px;
+    font-size: 20px;
     text-decoration: none;
     text-transform: uppercase;
     padding-left: 15px;
@@ -85,21 +87,26 @@ nav ul li a:hover{
 }
 .contenedor{
     width: 100%;
+   
+
 }
 
 .contenedor .Principal h2{
     position: absolute;
     width: 433.94px;
     height: 66px;
-    left: 450px;
-    top: 639px;
+    left: 555px;
+    top: 600px;
     font-family: 'Nunito';
     font-style: normal;
-    font-weight: 400;
-    font-size: 48.4398px;
+    font-weight: 700;
+    font-size: 48px;
     line-height: 66px;
-
     text-align: center;
+    color: #5799E3;
+
+}
+.slider{
 
 }
 .slider .ma {
@@ -134,81 +141,79 @@ nav ul li a:hover{
 .slider img:hover{
     transform: scale(1.2);
 }
-.slider2 h3{
+figcaption{
+    display: none;
+    transition: all .5s;
+}
+figure:hover > figcaption{
+    display: block;
+    transition: all .5s;
+}
+.slider2{
     position: absolute;
-    width: 412.75px;
-    height: 54.49px;
-    left: 500px;
-    top: 1097px;
+    width: 1368px;
+    height: 281px;
+    left: 48px;
+    top: 1100px;
 
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.slider2 .ti{
+    position: absolute;
+    width: 256px;
+    height: 54px;
+    left: 555px;
+    top: 10px;
     font-family: 'Nunito';
     font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 55px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: #5799E3;
 }
 .slider2 .ind1{
     position: absolute;
-    width: 96px;
-    height: 109px;
-    left: 122px;
-    top: 1176px;
+    width: 191px;
+    height: 151px;
+    left: 200px;
+    top: 80px;
 
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    font-size: 80px;
+    font-size: 64px;
     line-height: 109px;
-
     color: #000000;
-
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .slider2 .ind2{
     position: absolute;
-    width: 96px;
-    height: 109px;
-    left: 466px;
-    top: 1167px;
+    width: 249px;
+    height: 151px;
+    left: 650px;
+    top: 80px;
 
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    font-size: 80px;
+    font-size: 64px;
     line-height: 109px;
-
     color: #000000;
-
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .slider2 .ind3{
     position: absolute;
-    width: 48px;
-    height: 109px;
-    left: 810px;
-    top: 1176px;
+    width: 249px;
+    height: 151px;
+    left: 1100px;
+    top: 80px;
 
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    font-size: 80px;
-    line-height: 109px;
-
-    color: #000000;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.slider2 .ind4{
-    position: absolute;
-    width: 96px;
-    height: 109px;
-    left: 1154px;
-    top: 1176px;
-
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
+    font-size: 64px;
     line-height: 109px;
 
     color: #000000;
@@ -218,24 +223,23 @@ nav ul li a:hover{
 
 .text1{
     position: absolute;
-    width: 185px;
-    height: 54.49px;
-    left: 114px;
-    top: 1295px;
+    width: 191px;
+    height: 151px;
+    left: 180px;
+    top: 170px;
 
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    font-size: 36.3299px;
+    font-size: 36px;
     line-height: 50px;
-
 }
 .text2{
     position: absolute;
     width: 241px;
     height: 54px;
-    left: 433px;
-    top: 1312px;
+    left: 600px;
+    top: 170px;
 
     font-family: 'Nunito';
     font-style: normal;
@@ -247,9 +251,8 @@ nav ul li a:hover{
     position: absolute;
     width: 164px;
     height: 54px;
-    left: 777px;
-    top: 1305px;
-
+    left: 1060px;
+    top: 170px;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
@@ -269,103 +272,133 @@ nav ul li a:hover{
     font-size: 36.3299px;
     line-height: 50px;
 }
-.process h3{
+.process .title{
     position: absolute;
     width: 377px;
     height: 55px;
     left: 541px;
-    top: 1561px;
+    top: 1450px;
 
     font-family: 'Nunito';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 40px;
     line-height: 55px;
-
+    color: #5799E3;
     display: flex;
     align-items: center;
 }
 .process .post{
     position: absolute;
-    width: 100%;
-    height: 526px;
-    left: 0px;
-    top: 1696px;
-    background: #FF9054;
+    width: 1368px;
+    height: 615px;
+    left: 48px;
+    top: 1548px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 .process .post .nu1{
     position: absolute;
-    width: 30px;
-    height: 66px;
-    left: 238.14px;
-    top: 10px;
+    width: 24px;
+    height: 55px;
+    left: 262px;
+    top: 70px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 55px;
+
+    text-align: center;
+
 }
 .process .post .nu2{
     position: absolute;
-    width: 30px;
-    height: 66px;
-    left: 734.64px;
-    top: 10px;
+    width: 24px;
+    height: 55px;
+    left: 675px;
+    top: 70px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 55px;
+
+    text-align: center;
 }
 .process .post .nu3{
     position: absolute;
-    width: 30px;
-    height: 66px;
-    left: 1250.33px;
-    top: 10px;
+    width: 25px;
+    height: 55px;
+    left: 1093px;
+    top: 70px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 55px;
+
+    text-align: center;
 }
 .post .pos1{
+    box-sizing: border-box;
     position: absolute;
-    width: 339.08px;
-    height: 307.79px;
-    left: 67px;
-    top: 100px;
+    width: 325px;
+    height: 325px;
+    left: 107px;
+    top: 150px;
 }
 .post .pos2{
+    box-sizing: border-box;
     position: absolute;
-    width: 339.08px;
-    height: 307.79px;
-    left: 569.14px;
-    top: 100px;
+    width: 325px;
+    height: 325px;
+    left: 521px;
+    top: 150px;
 }
 .post .pos3{
+    box-sizing: border-box;
+
     position: absolute;
-    width: 339.08px;
-    height: 307.79px;
-    left: 1052.53px;
-    top: 100px;
+    width: 325px;
+    height: 325px;
+    left: 939px;
+    top: 150px;
 }
 .post .te1{
     position: absolute;
-    width: 264px;
-    height: 28px;
-    left: 106px;
-    top: 450px;
+    width: 325px;
+    height: 33px;
+    left: 107px;
+    top: 500px;
+    font-size: 24px;
 }
 .post .te2{
     position: absolute;
-    width: 438px;
-    height: 28px;
-    left: 544.92px;
-    top: 450px;
+    width: 325px;
+    height: 66px;
+    left: 521px;
+    top: 500px;
+    font-size: 24px;
 
 }
 .post .te3{
     position: absolute;
-    width: 235px;
-    height: 28px;
-    left: 1125px;
-    top: 450px;
+    width: 299px;
+    height: 33px;
+    left: 956px;
+    top: 500px;
+    font-size: 24px;
 
 }
 .sponsor{
     position: absolute;
     width: 100%;
-    height: 202.84px;
+    height: 160px;
     left: 0px;
-    top: 2221.16px;
-
-    background: rgba(154, 154, 154, 0.53);
+    top: 2188px;
+    background: #5799E3;
     display: flex;
     justify-content: space-between;
 }
@@ -376,34 +409,33 @@ nav ul li a:hover{
     top: 30px;
     left: 60px;
     cursor: pointer;
-
 }
 .sponsor .img2{
     position: absolute;
+    padding: 12px;
     width: 335px;
     height: 104px;
     top: 30px;
     left: 940px;
     cursor: pointer;
-
 }
 .piePagina{
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 50px;
     left: 0px;
-    top: 2422px;
-
-    background: #9A9A9A;
+    top: 2348px;
+    background: #FF9054;
     display: flex;
 	justify-content: space-between;
 }
 .piePagina .Derechos h6{
     position: absolute;
-    width: 297px;
-    height: 27px;
-    left: 48px;
-    top: 50px;
+    width: 490px;
+    height: 50px;
+    left: 41px;
+    top: 5px;
+
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
@@ -411,17 +443,21 @@ nav ul li a:hover{
     line-height: 27px;
     display: flex;
     align-items: center;
+
     color: #FFFFFF;
 }
 
 .piePagina .redes{
-    padding: 2em;
+    padding: 12px 12px 12px  10px;
 	font-size: 25px;
     
 }
 .piePagina .redes a{
 	color: #fff;
-	padding: 0 10px;
-	text-decoration: none;
-   
+	padding: 12px;
+	text-decoration: none;  
+    width: 238px;
+    height: 35.36px;
+    top: 5px;
+    padding-left: 10px;
 }

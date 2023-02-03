@@ -99,7 +99,6 @@ body {
     align-items: center;
     color: #9A9A9A;
 }
-
 /* Eliminación del diseño predeterminado de las entradas (inputs) */
 .barra-navegacion input {
     margin-left: 10px;
@@ -108,7 +107,6 @@ body {
     color: #9A9A9A;
     position: relative;
 }
-
 /* Diseño personalizado los calendarios para eliminar el icono que por defecto viene */
 .barra-navegacion input[type=date]::-webkit-calendar-picker-indicator{
     /* Tamaño */
@@ -119,7 +117,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-
     /* Diseño */
     margin: 0;
     background: 0 0;
@@ -127,7 +124,6 @@ body {
     opacity: 0;
     pointer-events: auto;
 }
-
 /* Posicionamiento al boton de las notificaciones */
 .barra-navegacion .notifiacion {
     margin-left: auto;
@@ -135,7 +131,6 @@ body {
     display: flex;
     align-items: center;
 }
-
 /* Creación del boton de las opciones de la cuenta */
 .barra-navegacion .cuenta {
     width: 40px;
@@ -146,7 +141,6 @@ body {
     align-items: center;
     overflow: hidden;
 }
-
 /* Adecuación de la imagen al tamaño del contenedor */
 .barra-navegacion .cuenta img {
     width: 100%;

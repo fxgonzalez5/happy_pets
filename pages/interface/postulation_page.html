@@ -12,56 +12,35 @@
 <body>
     <div class="contededor">
         <main>
+            <img src="/images/logo_happy_pets.png" title="HappyPets">
             <h2>Formulario de Adopción</h2>
-            <form method="post" action="procesar.php">
-                <div class="grupoinput">
-                    <label for="nombres">Nombres <samp class="rojo">*</samp></label>
-                    <input type="text" name="nombres" placeholder="Ingrese sus nombres" required>
+            <form action="submit.php" method="post">
+                <div class="form-group">
+                  <label for="name">Nombre:</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
                 </div>
-                <div class="grupoinput">
-                    <label for="apellidos">Apellidos</label>
-                    <input type="text" name="apellidos" placeholder="Ingrese sus Apellidos">
+                <div class="form-group">
+                  <label for="apellido">Apellido:</label>
+                  <input type="text" class="form-control" id="apellido" name="apellido" required>
                 </div>
-                <div class="grupoinput">
-                    <label for="correo">Correo</label>
-                    <input type="text" name="correo" placeholder="Ingrese su Correo">
+                <div class="form-group">
+                    <label for="Telefono">Telefono:</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" required>
+                  </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-                <div class="grupoinput">
-                    <label for="cedula">Cedula <samp class="rojo">*</samp></label>
-                    <input type="number" name="cedula" placeholder="Ingrese su cedula">
-                </div>
-                <div class="grupoinput">
-                    <label for="direccion">Direccion</label>
-                    <input type="text" name="direccion" placeholder="Ingrese sus nombres">
-                </div>
-                <div class="grupoinput">
-                    <label for="fechanacimiento">Fecha Nacimiento</label>
-                    <input type="date" id="fechanacimiento" name="fechanacimiento" placeholder="Ingrese su Fecha de Nacimiento">
-                </div>
-                <div class="grupoinput">
-                    <label for="telefono">Telefono</label>
-                    <input type="text" name="telefono" placeholder="Ingrese sus Telefono">
-                </div>
-                <button type="submit" class="button ">Guardar Datos</button>
-            </form>
+                <div class="form-group">
+                    <label for="apellido">Mascota:</label>
+                    <input type="radio" id="male" name="gender" value="masculino">
+                    <label for="male">Masculino</label><br>
+                    <input type="radio" id="female" name="gender" value="femenino">
+                    <label for="female">Femenino</label><br>
+                  </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
         </main>
-        <section class="sponsor">
-            <img class="img1" src="/images/home/logo UTPL.png" >
-            <img  class="img2" src="/images/home/logo Municipio.png" >
-        </section>
-       
-        <footer class="piePagina">
-            <section class="Derechos">
-                <h6>Derechos Reservados UTPL 2023</h6>
-            </section>
-            <nav class="redes">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
-            </nav>
-        </footer>
-
     </div>
     
 </body>
