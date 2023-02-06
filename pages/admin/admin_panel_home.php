@@ -15,7 +15,7 @@
     
     <!-- Carga de estilos -->
     <link rel="stylesheet" type="text/css" href="../../css/global_style.css">
-    <link rel="stylesheet" type="text/css" href="../../css/admin_panel_home_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/admin/admin_panel_home_style.css">
     
     <!-- Importación de tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +87,7 @@
                 </div>
             </a>
 
-            <a class="btn-salir" href="../../index.html">
+            <a class="btn-salir" href="../../index.php">
                 <div class="boton1">
                     <iconify-icon icon="humbleicons:logout" style="font-size: 24px;"></iconify-icon>
                     <p class="titulo2">Cerrar Sesión</p>
@@ -100,10 +100,10 @@
         <div class="barra-navegacion">
             
             <!-- Creación del Buscador -->
-            <!-- <div class="buscador">
+            <div class="buscador">
                 <iconify-icon icon="material-symbols:search-rounded" style="font-size: 24px;"></iconify-icon>
                 <input type="search" name="buscar" placeholder="Buscar...">
-            </div> -->
+            </div>
 
             <!-- Creación del Calendario -->
             <!-- <div class="calendario">

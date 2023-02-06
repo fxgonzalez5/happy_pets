@@ -16,15 +16,14 @@
         var $Consulta_ID;
 
         // Inicialización de las variables anteriormente declaradas
-        public function __construct($host="", $db="", $user="", $pass="")
-        {
+        public function __construct($host="", $db="", $user="", $pass="") {
             $this->Servidor = $host;
             $this->BaseDatos = $db;
             $this->Usuario = $user;
             $this->Clave = $pass;
         }
 
-        function connection($host, $user, $pass, $db){
+        function connection($host, $user, $pass, $db) {
 
             // Validación de las variables que no esten vacías y asignación de los valores para la conexión
             if ($db != "") $this->BaseDatos = $db; 
@@ -49,7 +48,7 @@
         }
 
 
-        function query($sql = ""){
+        function query($sql = "") {
 
             // Validación si la variable no esta vacía
             if ($sql == "") {
@@ -70,8 +69,7 @@
             return $this->Consulta_ID;
         }
 
-        function queryFor($sql = ""){
-
+        function queryFor($sql = "") {
             // Validación si la variable no esta vacía
             if ($sql == "") {
                 $this->Error = "No hay consulta en sql";
@@ -85,8 +83,59 @@
             return $this->Consulta_ID->fetch_array();
         }
 
+
+        // Funciones para Vizualización del Administrador
+        function mascotaHome() {
+            // Consulta de las máscotas más antiguas
+            $sql = "SELECT `idMascota`, `imagen`, `nombre`, `descripcion` FROM mascota WHERE idPostulante IS NULL LIMIT 3";
+            $consultaId = $this->query($sql);
+
+            while ($row = mysqli_fetch_array($consultaId)) {
+                echo "<div class='mascota'><img src='images/$row[1]'></div>";
+            }
+        }
+
+        function tarjetaMascota() {
+            // Consulta de las máscotas más antiguas
+            $sql = "SELECT `idMascota`, `imagen`, `nombre`, `descripcion` FROM mascota";
+            $consultaId = $this->query($sql);
+
+            while ($row = mysqli_fetch_array($consultaId)) {
+                echo "<div class='tarjeta'>";
+                echo "<div class='mascota'><img src='../../images/$row[1]'></div>";
+                echo "<div class='texto'>";
+                echo "<p class='nombre'>$row[2]</p>";
+                echo "<p class='descripcion'>$row[3]</p>";
+                echo "<a href='description_page.php?id=$row[0]'>+Info</a>";
+                echo "</div>";
+                echo "</div>";
+            }
+        }
+
+        function listaPostulantes() {
+            $sql = "SELECT `nombre`, `apellido`, `mascota`, `fecha` FROM postulaciones ORDER BY idPersona DESC";
+            $consultaId = $this->query($sql);
+            $conteo = 0;
+
+            while ($row = mysqli_fetch_array($consultaId)) {
+                echo "<tr>";
+
+                if ($conteo < 10) {
+                    echo "<td class='gris'>0$conteo</td>";
+                    $conteo++;
+                } else {
+                    echo "<td class='gris'>$conteo</td>";
+                    $conteo++;
+                }
+                echo "<td class='azul'>$row[0] $row[1]</td>";
+                echo "<td class='naranja'>$row[2]</td>";
+                echo "<td class='amarillo'>$row[3]</td>";
+
+                echo "</tr>";
+            }
+        }
         
-        // Funciones para Vizualización
+        // Funciones para Vizualización del Administrador
         function imagenCuenta(){
             $idUsuario = $_GET['id'];
 
@@ -103,7 +152,6 @@
         }
 
         function nuevoUsuario(){
-    
             $id = "SELECT MAX(idUsuario) AS max_id FROM usuario";
             $idUsuario = $this->queryFor($id)['max_id'];
     
@@ -172,7 +220,7 @@
             
             echo "<div class='contenido'>";
             echo "<div class='foto'>";
-            echo "<img src='../../images/admin/$imagen'>";
+            echo "<img src='../../images/$imagen'>";
             echo "</div>";
     
             echo "<div class='informacion'>";
@@ -486,7 +534,7 @@
             $sql = "SELECT * FROM usuarios";
             $consultaId = $this->query($sql);
 
-            echo "<table id='tabla'>";
+            echo "<table>";
 
             echo "<tr>";
             echo "<th class='id'>#</th>";
@@ -513,7 +561,7 @@
             echo "<tr class='espacio-filas'></tr>";
         
             while ($row = mysqli_fetch_array($consultaId)) {
-            echo "<tr id='fila' data-value='persona'>";
+            echo "<tr data-value='persona'>";
 
                 if ($row[0] < 10) {
                     echo "<td class='id'>0$row[0]</td>";
@@ -552,7 +600,7 @@
                 }
                 echo "<td class='espacio-columnas'></td>";
                 echo "<td class='accion'>";
-                echo "<button id='editar' class='editar'>";
+                echo "<button id='editar' class='editar' data-value='persona'> ";
                 echo "<iconify-icon icon='material-symbols:edit-outline-rounded' style='font-size: 20px;'></iconify-icon>";
                 echo "Editar";
                 echo "</button>";

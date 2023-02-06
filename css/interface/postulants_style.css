@@ -1,0 +1,235 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #F2F2F2; 
+}
+
+header {
+    width: 100%;
+    background-color: #9A9A9A;
+}
+
+.cabecera {
+    width: auto;
+    height: auto;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.cabecera .logo img{
+    width: 50%;
+}
+
+.cabecera nav{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.cabecera nav a{
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    padding-right: 20px;
+    font-weight: 600;
+    transition-duration: 0.3s;	
+}
+
+.cabecera nav a:hover{
+    color: #FFD954;
+}
+
+.cabecera .botones a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cabecera .botones .iniciar-sesion{
+    margin-left: 25px;
+    background: #5799E3;
+}
+
+.cabecera .botones .registrarse{
+    margin-left: 10px;
+    background: #FF9054;
+}
+
+.tarjeta {
+    width: 95%;
+    height: 98vh;
+    margin: 30px auto;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px #00000075;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta .titulo{
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #5799E3;
+    text-align: center;
+}
+
+.tarjeta .contenido{
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta .contenido input {
+    width: 20%;
+    margin-left: auto;
+    padding: 5px 5px;
+    outline: none;
+    border: 2px solid #9A9A9A;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.tarjeta .contenido input:hover {
+    border: 2px solid #FF9054;
+}
+
+.tarjeta .contenido .tabla {
+    height: 550px;
+    margin-top: 20px;
+    border: 3px solid #9A9A9A;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.tarjeta .contenido .tabla::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #9A9A9A;
+}
+
+.tarjeta .contenido .tabla::-webkit-scrollbar-thumb{
+    background-color: #F2F2F2;
+}
+
+.tarjeta .contenido table {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+.tarjeta .contenido table th {
+    padding: 5px 0px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.tarjeta .contenido table td {
+    /* Tamaño y Márgenes */
+    padding: 5px 10px;
+
+    /* Alineación y Diseño */
+    text-align: center;
+    border-radius: 5px;
+
+    font-size: 18px;
+}
+
+.tarjeta .contenido table tr .numero {
+    width: 10%;
+    background-color: #F2F2F2;
+    border: 3px solid #F2F2F2;
+}
+
+.tarjeta .contenido table tr .postulante {
+    width: 35%;
+    background-color: #5799E3;
+    border: 3px solid #5799E3;
+}
+
+.tarjeta .contenido table tr .mascota  {
+    width: 30%;
+    background-color: #FF9054;
+    border: 3px solid #FF9054;
+}
+
+.tarjeta .contenido table tr .fecha {
+    width: 25%;
+    background-color: #FFD954;
+    border: 3px solid #FFD954;
+}
+
+.tarjeta .contenido table tr .gris {
+    border: 3px solid #F2F2F2;
+}
+
+.tarjeta .contenido table tr .azul {
+    border: 3px solid #5799E3;
+}
+
+.tarjeta .contenido table tr .naranja  {
+    border: 3px solid #FF9054;
+}
+
+.tarjeta .contenido table tr .amarillo {
+    border: 3px solid #FFD954;
+}
+
+.sponsor{
+    width: 100%;
+    height: 150px;
+    background: #5799E3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sponsor img {
+    height: 75%;
+    margin: 0px 75px;
+}
+
+.sponsor p {
+    width: 20%;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    background: #FF9054;
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+}
+
+footer p{
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+footer nav {
+    width: 20%;
+    margin-right: 65px;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav a{
+    margin: 0px 10px;
+    font-size: 30px;
+	color: #fff;
+    display: flex;
+}

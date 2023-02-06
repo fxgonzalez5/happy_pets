@@ -17,22 +17,20 @@
         $idUsuario = $conexion->queryFor($sql)['idUsuario'];
         $contraseña = $conexion->queryFor($sql)['contraseña'];
         $rol = $conexion->queryFor($sql)['rol'];
-        
-        $contrasenia = md5($contrasenia);
 
         // Validación de la contraseña
-        if ($contrasenia == $contraseña){
+        if (md5($contrasenia) == $contraseña){
 
             // Validación del tipo de usuario para el respectivo ingreso a su panel de administración
             if ($rol == 0) {
                 echo "<script>location.href='../../pages/admin/admin_panel_home.php?id=$idUsuario'</script>";
             } else {
                 // TODO: Colocar la ruta de la página para los usuarios
-                echo "<script>location.href='../../pages/admin/admin_panel_home.html?id=$idUsuario'</script>";
+                echo "<script>location.href='../../pages/admin/admin_panel_home.php?id=$idUsuario'</script>";
             }
         } else {
             echo '<script>alert("El correo o la contraseña está incorrecto.");</script>';
-            echo "<script>location.href='../../pages/guard/log_in_page.php'</script>";
+            echo "<script>location.href='../../pages/guard/log_in_page.html'</script>";
         }
 
     } else {
@@ -44,18 +42,18 @@
         $rol = $conexion->queryFor($sql)['rol'];
 
         // Validación de la contraseña
-        if ($contrasenia == $contraseña){
+        if (md5($contrasenia) == $contraseña){
 
             // Validación del tipo de usuario para el respectivo ingreso a su panel de administración
             if ($rol == 0) {
                 echo "<script>location.href='../../pages/admin/admin_panel_home.php?id=$idUsuario'</script>";
             } else {
                 // TODO: Colocar la ruta de la página para los usuarios
-                echo "<script>location.href='../../pages/admin/admin_panel_home.html?id=$idUsuario'</script>";
+                echo "<script>location.href='../../pages/admin/admin_panel_home.php?id=$idUsuario'</script>";
             }
         } else {
             echo '<script>alert("El usuario o la contraseña está incorrecto.");</script>';
-            echo "<script>location.href='../../pages/guard/log_in_page.php'</script>";
+            echo "<script>location.href='../../pages/guard/log_in_page.html'</script>";
         }
     }
 

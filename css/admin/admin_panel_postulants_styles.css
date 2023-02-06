@@ -1,0 +1,442 @@
+/* Estilo personalizado al body de la página del administrador */
+body {
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 100vh;
+}
+  
+/* Contenedor de todo el contenido dentro de la pantalla */
+.contenido-general{
+    padding: 25px;
+
+    /* Creación de una tabla para ubicar cada elemento o componente */
+    display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: 12.5% 11% 100%;
+	grid-gap: 0px;
+
+    grid-template-areas:    "menulat    barra"
+                            "menulat    filtros"
+                            "menulat    tabla"
+
+}
+
+/* ------   
+    Menu    
+   ------ */
+
+/* Estilo del menu */
+.menu {
+    /* Asignación del área correspondiente al contenedor dentro de la grilla o tabla */
+    grid-area: menulat;
+
+    /* Tamaño al contenedor */
+    width: auto;
+    height: 99%;
+
+    /* Márgenes al contenedor */
+    margin-right: 10px;
+    padding: 15px;
+    
+    /* Color y angulo de borde */
+    background-color: white;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Aliniación del logo en el centro */
+.menu .img-logo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Eliminación de la dercoración a la etiqueta <a> para los hipervínculos */
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilo personalizado para el boton de cerrar sesión */
+.menu .btn-salir{
+    margin-top: auto;
+    display: flex;
+}
+
+
+/* ---------------------   
+    Barra de Navegación    
+   --------------------- */
+
+/* Estilo de la barra navegación */
+.barra-navegacion {
+    grid-area: barra;
+
+    height: min-content;
+
+    /* Márgenes */
+    padding: 15px;
+
+    /* Diseño */
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+}
+
+/* Diseño del contorno de las entradas (inputs) de la barra de navegación */
+.barra-navegacion .buscador, .barra-navegacion .calendario{
+    /* Márgenes */
+    margin-right: 20px;
+    padding: 5px 10px;
+
+    /* Borde */
+    border: 1px solid #9A9A9A;
+    border-radius: 5px;
+
+    /* Comportamiento, Alineación y Color de los elementos que se encuentran dentro del contenedor */
+    display: flex;
+    align-items: center;
+    color: #9A9A9A;
+}
+
+/* Eliminación del diseño predeterminado de las entradas (inputs) */
+.barra-navegacion input {
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    color: #9A9A9A;
+    position: relative;
+}
+
+/* Diseño personalizado los calendarios para eliminar el icono que por defecto viene */
+.barra-navegacion input[type=date]::-webkit-calendar-picker-indicator{
+    /* Tamaño */
+    width: 100%;
+    height: 100%;
+
+    /* Posición */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Diseño */
+    margin: 0;
+    background: 0 0;
+    color: transparent;
+    opacity: 0;
+    pointer-events: auto;
+}
+
+/* Posicionamiento al boton de las notificaciones */
+/* .barra-navegacion .notifiacion {
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+} */
+
+/* Creación del boton de las opciones de la cuenta */
+.barra-navegacion .cuenta {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Adecuación de la imagen al tamaño del contenedor */
+.barra-navegacion .cuenta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ----------------------   
+    Botones y Filtrados    
+   ---------------------- */
+
+/* Estilo de las opcines */
+.opciones {
+    grid-area: filtros;
+    
+    width: auto;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del boton agregar nueva mascota */
+.opciones .agregar {
+    /* Tamaño */
+    width: 12%;
+    height: 100%;
+    
+    /* Diseño */
+    background-color: #9A9A9A;
+    border: 1px solid #9A9A9A;
+    border-radius: 8px;
+
+    /* Estilo de letra */
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+
+    /* Comportamiento */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+}
+
+/* Estilo de los menus desplegables para el filtrado */
+.opciones select {
+    width: auto;
+    height: 80%;
+    margin-right: 15px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #9A9A9A;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 3px 5px grey;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Efecto en los menus desplegables cuando el puntero esta encima */
+.opciones select:hover {
+    border: 1px solid black;
+}
+
+/* Esconde las opciones deshabilitadas que sirven como placeholder */
+.opciones select option[disabled] {
+    display: none;
+}
+
+.opciones input {
+    width: auto;
+    height: 50%;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #9A9A9A;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 3px 5px grey;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Estilo del boton eliminar */
+.opciones .eliminar {
+    /* Tamaño */
+    width: 8%;
+    height: 100%;
+
+    /* Márgenes */
+    margin-left: auto;
+    
+    /* Diseño */
+    background-color: #FF9054;
+    border: 1px solid #FF9054;
+    border-radius: 8px;
+
+    /* Estilo de letra */
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+
+    /* Comportamiento */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+}
+
+
+/* -------   
+    Tabla    
+   ------- */
+
+/* Comprtamiento a un contenedor vacío que contiene a otro contenedor que a su vez tiene como hijo la tabla, para que no se salga del los márgenes de la pantalla */
+.contenedor {
+    display: flex;
+}
+
+/* Estilo al contenedor de la tabla */
+.contenedor .tabla {
+    grid-area: tabla;
+
+    width: 100%;
+    height: 95%;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Activa' */
+.tabla .activa {
+    background-color: #FFD954;
+    border: 1px solid #FFD954;
+    font-weight: 600;
+    color: white;
+}
+
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Completado' */
+.tabla .completada {
+    background-color: #5799E3;
+    border: 3px solid #5799E3;
+    font-weight: 600;
+    color: white;
+}
+
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Pendiente' */
+.tabla .pendiente {
+    background-color: #FF9054;
+    border: 3px solid #FF9054;
+    font-weight: 600;
+    color: white;
+}
+
+/* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Cancelado' */
+.tabla .cancelada {
+    background-color: #9A9A9A;
+    border: 1px solid #9A9A9A;
+    font-weight: 600;
+    color: white;
+}
+
+
+/* ------------------------   
+    Estilos Personalizados    
+   ------------------------ */
+
+/* <<< Textos >>> */
+
+/* Estilo de texto al titulo del menu */
+.titulo1 {
+    font-size: 16px;
+    font-weight: 600; /* Tipo de letra SemiBold */
+}
+
+/* Estilo de texto a las opciones del menu */
+.titulo2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+
+/* <<< Botones >>> */
+
+/* Diseño de los botones del menu */
+.boton1 {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+}
+
+/* Efecto al poner el cursor encima del boton para vizualizar cuando se haga click */
+.boton1:hover{
+    background-color: #5799E3;
+    color: white;
+}
+
+
+/* <<< Tablas >>> */
+
+/* Diseño de las tablas */
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 15px;
+    border-spacing: 0px;
+}
+
+/* Estilo personalizado a la cabecera de la tabla */
+th {
+    border-radius: 5px;
+    background-color: #F2F2F2;
+}
+
+/* Estilo personalizado a las celdas de la tabla */
+tr, td {
+     /* Tamaño y Márgenes */
+     height: 30px;
+     padding: 0px 5px;
+ 
+     /* Alineación y Diseño */
+     text-align: center;
+     border-radius: 5px;
+     border: 3px solid #F2F2F2;
+     background-color: white;
+ 
+     /* Comportamiento */
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+
+/* Estilo a las celdas de la columna que contienen el identificador de cada entidad */
+.id {
+    width: 30px;
+    background-color: #F2F2F2;
+    border: 3px solid #F2F2F2;
+}
+
+/* Tamaño perzonalizado a cada columna de la tabla */
+.persona {
+    width: 15%;
+}
+
+.mascota {
+    width: 10%;
+}
+
+.edad, .sexo {
+    width: 7%;
+}
+
+.celular {
+    width: 12%;
+}
+
+.estado {
+    width: 8%;
+}
+
+.fecha {
+    width: 12%;
+}
+
+
+/* Estilo a una fila de la tabla para que actue como un espacio entre dos filas */
+.espacio-filas {
+    height: 10px !important;
+}
+
+/* Estilo a una columna (varias celdas) para que actuen como un espacio entre dos columnas */
+.espacio-columnas {
+    width: 10px;
+    padding: 0px !important;
+    background: none;
+    border: none !important;
+}
+
+/* Estilo para una fila seleccionada */
+.seleccionada {
+    background-color: lightgray;
+    border: none;
+  }  

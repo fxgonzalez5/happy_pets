@@ -15,7 +15,7 @@
     
     <!-- Carga de estilos -->
     <link rel="stylesheet" type="text/css" href="../../css/global_style.css">
-    <link rel="stylesheet" type="text/css" href="../../css/admin_panel_persons.css">
+    <link rel="stylesheet" type="text/css" href="../../css/admin/admin_panel_persons.css">
     
     <!-- Importación de tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,9 @@
         $conexion->connection(DBHOST, DBUSER, DBPASS, DBNAME);
     
         $idUsuario = $_GET['id'];
+
+        // Importación de los selects para obtener los datos de la persona
+        include("../../php/functions/selects.php");
     ?>
 
     <div class="contenido-general">
@@ -90,7 +93,7 @@
                 </div>
             </a>
 
-            <a class="btn-salir" href="../../index.html">
+            <a class="btn-salir" href="../../index.php">
                 <div class="boton1">
                     <iconify-icon icon="humbleicons:logout" style="font-size: 24px;"></iconify-icon>
                     <p class="titulo2">Cerrar Sesión</p>
@@ -103,10 +106,10 @@
         <div class="barra-navegacion">
             
             <!-- Creación del Buscador -->
-            <!-- <div class="buscador">
+            <div class="buscador">
                 <iconify-icon icon="material-symbols:search-rounded" style="font-size: 24px;"></iconify-icon>
                 <input type="search" name="buscar" placeholder="Buscar...">
-            </div> -->
+            </div>
 
             <!-- Creación del Calendario -->
             <!-- <div class="calendario">
@@ -254,7 +257,7 @@
                     <div class="fila">
                         <div class="datocorto">
                             <label for="id">Número</label>
-                            <input type="text" id="id-n" name="id-n" disabled>
+                            <input type="text" id="id-n" name="id-n" value="<?php echo $idUltimaPersona + 1; ?>" disabled>
                         </div>
 
                         <div class="datocorto">

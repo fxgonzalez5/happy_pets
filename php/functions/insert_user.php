@@ -47,7 +47,7 @@
         echo "Problemas de ejecución del SQL";
     } else {
         // TODO: Cambiar la ruta para el panel de administración del usuario
-        echo "<script>location.href='../../pages/admin/admin_panel_home.php'</script>";
+        echo "<script>location.href='../../pages/admin/admin_panel_home.php?id=$idPersona'</script>";
     }
 
 ?>
