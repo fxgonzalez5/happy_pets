@@ -42,6 +42,7 @@
 
         // Importación de los selects para obtener los datos de la persona
         include("../../php/functions/selects.php");
+        include("../../php/functions/select_data.php");
     ?>
 
     <div class="contenido-general">
@@ -190,58 +191,72 @@
                     <div class="fila">
                         <div class="datocorto">
                             <label>Número</label>
-                            <input type="text" value="1" disabled>
+                            <input type="text" value="<?php echo $idPersona ?>" disabled>
                         </div>
 
                         <div class="datocorto">
                             <label>Nombre</label>
-                            <input type="text" value="Juan" disabled>
+                            <input type="text" value="<?php echo $nombre ?>" disabled>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label>Apellido</label>
-                            <input type="text" value="Pérez" disabled>
+                            <input type="text" value="<?php echo $apellido ?>" disabled>
                         </div>
 
                         <div class="datocorto">
                             <label>Usuario</label>
-                            <input type="text" value="JuPerez81" disabled>
+                            <input type="text" value="<?php echo $usuario ?>" disabled>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
-                            <label>Edad</label>
-                            <input type="text" value="28" disabled>
+                            <label>Fecha de Nacimiento</label>
+                            <input type="date" value="<?php echo date("Y-m-d" , strtotime($fecha)) ?>" disabled>
                         </div>
 
                         <div class="datocorto">
                             <label>Género</label>
                             <select disabled>
-                                <option value="M" selected>Masculino</option>
-                                <option value="F">Femenino</option>
+                                <?php 
+                                    if ($genero == "M") {
+                                        echo "<option value='M' selected>Masculino</option>";
+                                        echo "<option value='F'>Femenino</option>";
+                                    } else {
+                                        echo "<option value='M'>Masculino</option>";
+                                        echo "<option value='F' selected>Femenino</option>";
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
 
                     <div class="datolargo">
                         <label>Correo Electrónico</label>
-                        <input type="email" value="juperez@hotmail.com" disabled>
+                        <input type="email" value="<?php echo $correo ?>" disabled>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label>Celular</label>
-                            <input type="text" value="+593 945671234" disabled>
+                            <input type="text" value="<?php echo $celular ?>" disabled>
                         </div>
 
                         <div class="datocorto">
                             <label>Rol</label>
                             <select disabled>
-                                <option value="0" selected>Administrador</option>
-                                <option value="1">Usuario</option>
+                                <?php 
+                                    if ($rol == 0) {
+                                        echo "<option value='0' selected>Administrador</option>";
+                                        echo "<option value='1'>Usuario</option>";
+                                    } else {
+                                        echo "<option value='0'>Administrador</option>";
+                                        echo "<option value='1' selected>Usuario</option>";
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -251,13 +266,14 @@
 
         <dialog id="ventana-n">
             <div class="cuadro">
-                <form class="formulario" method="post" action="../../php/functions/insert_person.php">
+                <form class="formulario" method="post" action="../../php/functions/insert_person.php?id=<?php echo $idUsuario ?>">
                     <img id="cerrar-n" src="../../images/admin/icons/cancel.png" alt="Cerrar" width="35px">
                     <p class="titulo3">Nuevo Usuario</p>
                     <div class="fila">
                         <div class="datocorto">
-                            <label for="id">Número</label>
-                            <input type="text" id="id-n" name="id-n" value="<?php echo $idUltimaPersona + 1; ?>" disabled>
+                            <label>Número</label>
+                            <input type="text" value="<?php echo $idUltimaPersona + 1; ?>" disabled>
+                            <input type="hidden" name="id" value="<?php echo $idUltimaPersona + 1; ?>">
                         </div>
 
                         <div class="datocorto">
@@ -280,8 +296,8 @@
 
                     <div class="fila">
                         <div class="datocorto">
-                            <label for="edad">Edad</label>
-                            <input type="text" id="edad" name="edad" placeholder="Ingrese la edad">
+                            <label for="fecha">Fecha de Nacimiento</label>
+                            <input type="date" id="fecha" name="fecha">
                         </div>
 
                         <div class="datocorto">
@@ -325,71 +341,84 @@
 
         <dialog id="ventana-e">
             <div class="cuadro">
-                <form class="formulario" method="post" action="../../php/functions/insert_person.php">
+                <form class="formulario" method="post" action="../../php/functions/update_person.php?id=<?php echo $idUsuario ?>">
                     <img id="cerrar-e" src="../../images/admin/icons/cancel.png" alt="Cerrar" width="35px">
                     <p class="titulo3">Editar Usuario</p>
                     <div class="fila">
                         <div class="datocorto">
-                            <label for="id">Número</label>
-                            <input type="text" id="id-e" name="id-e" disabled>
+                            <label >Número</label>
+                            <input type="text" value="<?php echo $idPersona ?>" disabled>
+                            <input type="hidden" name="id" value="<?php echo $idPersona ?>">
                         </div>
 
                         <div class="datocorto">
                             <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre">
+                            <input type="text" id="nombre" name="nombre" value="<?php echo $nombre ?>" placeholder="Ingrese el nombre" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label for="apellido">Apellido</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Ingrese el apellido">
+                            <input type="text" id="apellido" name="apellido" value="<?php echo $apellido ?>" placeholder="Ingrese el apellido" required>
                         </div>
 
                         <div class="datocorto">
                             <label for="usuario">Usuario</label>
-                            <input type="text" id="usuario" name="usuario" placeholder="Ingrese un nombre de usuario">
+                            <input type="text" id="usuario" name="usuario" value="<?php echo $usuario ?>" placeholder="Ingrese un nombre de usuario" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
-                            <label for="edad">Edad</label>
-                            <input type="text" id="edad" name="edad" placeholder="Ingrese la edad">
+                            <label for="fecha">Fecha de Nacimiento</label>
+                            <input type="date" id="fecha" name="fecha" value="<?php echo date("Y-m-d" , strtotime($fecha)) ?>" required>
                         </div>
 
                         <div class="datocorto">
                             <label for="genero">Género</label>
                             <select name="genero" id="genero">
-                                <option disabled selected>Seleccione el género</option>
-                                <option value="M">Masculino</option>
-                                <option value="F">Femenino</option>
+                                <?php 
+                                    if ($genero == "M") {
+                                        echo "<option value='M' selected>Masculino</option>";
+                                        echo "<option value='F'>Femenino</option>";
+                                    } else {
+                                        echo "<option value='M'>Masculino</option>";
+                                        echo "<option value='F' selected>Femenino</option>";
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
 
                     <div class="datolargo">
                         <label for="correo">Correo Electrónico</label>
-                        <input type="email" id="correo" name="correo" placeholder="Ingrese el correo electrónico">
+                        <input type="email" id="correo" name="correo" value="<?php echo $correo ?>" placeholder="Ingrese el correo electrónico" required>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label for="celular">Celular</label>
-                            <input type="text" id="celular" name="celular" placeholder="Ingrese el número celular">
+                            <input type="text" id="celular" name="celular" value="<?php echo $celular ?>" placeholder="Ingrese el número celular" required>
                         </div>
 
                         <div class="datocorto">
                             <label for="rol">Rol</label>
                             <select name="rol" id="rol">
-                            <option disabled selected>Seleccione el rol</option>
-                                <option value="0">Administrador</option>
-                                <option value="1">Usuario</option>
+                                <?php 
+                                    if ($rol == 0) {
+                                        echo "<option value='0' selected>Administrador</option>";
+                                        echo "<option value='1'>Usuario</option>";
+                                    } else {
+                                        echo "<option value='0'>Administrador</option>";
+                                        echo "<option value='1' selected>Usuario</option>";
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
 
-                    <button class="guardar-e">
+                    <button type="submit" class="guardar-e">
                         <iconify-icon icon="material-symbols:save-outline-rounded" style="font-size: 25px;"></iconify-icon>
                         Guardar
                     </button>

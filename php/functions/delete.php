@@ -7,10 +7,7 @@
     $conexion->connection(DBHOST, DBUSER, DBPASS, DBNAME);
 
     // Extracción del identificador del registro
-    $id = $_POST['id'];
-    if (strpos($id, '0') == 0){
-        $id = substr($id, 1);
-    }
+    $id = (int)$_POST['id'];
 
     if ($_POST['id1']) {
         $id1 = $_POST['id1'];

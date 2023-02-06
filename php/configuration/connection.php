@@ -442,6 +442,8 @@
             echo "<th class='espacio-columnas'></th>";
             echo "<th>Descripción</th>";
             echo "<th class='espacio-columnas'></th>";
+            echo "<th class='imagen'>Imagen</th>";
+            echo "<th class='espacio-columnas'></th>";
             echo "<th class='adoptante'>Adoptante</th>";
             echo "<th class='espacio-columnas'></th>";
             echo "<th class='fecha'>Fecha Adopción</th>";
@@ -503,7 +505,9 @@
                     echo "<td class='sexo'>Hembra</td>";
                 }
                 echo "<td class='espacio-columnas'></td>";
-                echo "<td class='columna2 final'>$row[7]</td>";
+                echo "<td>$row[7]</td>";
+                echo "<td class='espacio-columnas'></td>";
+                echo "<td class='imagen'><div class='mascota'><img src='../../images/$row[3]'></div></td>";
                 echo "<td class='espacio-columnas'></td>";
                 if ($row[8]) {
                     echo "<td class='adoptante'>$row[8]</td>";
@@ -518,7 +522,7 @@
                 }
                 echo "<td class='espacio-columnas'></td>";
                 echo "<td class='accion'>";
-                echo "<button class='editar'>";
+                echo "<button id='editar' class='editar' data-value='mascota'> ";
                 echo "<iconify-icon icon='material-symbols:edit-outline-rounded' style='font-size: 20px;'></iconify-icon>";
                 echo "Editar";
                 echo "</button>";

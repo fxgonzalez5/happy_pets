@@ -298,7 +298,7 @@ body {
 /* Estilos de la ventana flotante */
 #ventana, #ventana-n, #ventana-e {
     width: 50%;
-    height: 75%;
+    height: 80%;
     border: none;
     border-radius: 10px;
     position: absolute;
@@ -344,7 +344,7 @@ body {
 }
 
 #ventana .formulario .fila .datocorto, #ventana-n .formulario .fila .datocorto, #ventana-e .formulario .fila .datocorto {
-    width: 35%;
+    width: 40%;
     text-align: left;
  }
 
@@ -363,7 +363,6 @@ body {
 #ventana .formulario input, #ventana-n .formulario input, #ventana-e .formulario input, #ventana .formulario select, #ventana-n .formulario select, #ventana-e .formulario select {
     width: 100%;
     height: 35px;
-    padding: 0px 10px;
     outline: none;
     border: 2px solid #9A9A9A;
     border-radius: 10px;
@@ -373,8 +372,27 @@ body {
     text-align: center;
 }
 
+#ventana .formulario input:disabled, #ventana-n .formulario input:disabled, #ventana-e .formulario input:disabled {
+    border: 2px solid #FF9054;
+    color: black;
+    background-color: #F2F2F2;
+    cursor: not-allowed !important;
+}
+
 #ventana-n .formulario input:hover, #ventana-e .formulario input:hover, #ventana-n .formulario select:hover, #ventana-e .formulario select:hover {
     border: 2px solid #FF9054;
+}
+
+#ventana .formulario select:disabled, #ventana-n .formulario select:disabled, #ventana-e .formulario select:disabled {
+    border: 2px solid #FF9054;
+    color: black;
+    font-weight: 600;
+    background: #F2F2F2;
+    cursor: not-allowed !important;
+}
+
+#ventana .formulario select option[disabled], #ventana-n .formulario select option[disabled], #ventana-e .formulario select option[disabled] {
+    display: none;
 }
 
 #ventana-n .formulario .guardar-n, #ventana-e .formulario .guardar-e{

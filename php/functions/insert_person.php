@@ -6,8 +6,10 @@
  	$conexion = new class_mysql();
  	$conexion->connection(DBHOST, DBUSER, DBPASS, DBNAME);
 
+     $idUsuario = $_GET['id'];
+
     // Datos para registrarse en el sistema
-    $id                 = $_POST['id-n'];
+    $id                 = $_POST['id'];
 	$nombre             = $_POST['nombre'];
 	$apellido           = $_POST['apellido'];
 	$usuario            = $_POST['usuario'];
@@ -15,9 +17,8 @@
 	$correo             = $_POST['correo'];
 	$contrasenia        = 'y<QgW2xq';
     $celular            = $_POST['celular'];
-    $fecha              = date("d-m-Y");
+    $fecha              = $_POST['fecha'];
     
-
     // Insersión de los datos de la persona
     $sqlp = "INSERT INTO persona values ('$id','$nombre','$apellido','$genero','$celular','$fecha')";
     
@@ -45,8 +46,7 @@
     if ($resSQL == "") {
         echo "Problemas de ejecución del SQL";
     } else {
-        // TODO: Cambiar la ruta para el panel de administración del usuario
-        echo "<script>location.href='../../pages/admin/admin_panel_persons.php?id=1'</script>";
+        echo "<script>location.href='../../pages/admin/admin_panel_persons.php?id=$idUsuario'</script>";
     }
 
 ?>

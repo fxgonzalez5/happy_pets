@@ -272,6 +272,21 @@ body {
     flex-direction: column;
 }
 
+/* Estilo a las imagenes de la mascota */
+.contenedor .tabla .mascota {
+    width: 60%;
+    height: 38px;
+    margin: auto;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.contenedor .tabla .mascota img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Estilo al boton editar */
 .contenedor .tabla .editar {
      /* Tamaño */
@@ -298,6 +313,169 @@ body {
 }
 
 
+/* ------------------   
+    Ventana Flotante    
+   ------------------ */
+
+/* Estilos de la ventana flotante */
+#ventana, #ventana-n, #ventana-e {
+    width: 50%;
+    height: 80%;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ventana::backdrop, #ventana-n::backdrop, #ventana-e::backdrop{
+    background-color: rgba(154, 154, 154, .8);
+}
+
+#ventana .cuadro, #ventana-n .cuadro, #ventana-e .cuadro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ventana .cuadro .formulario, #ventana-n .cuadro .formulario, #ventana-e .cuadro .formulario {
+    width: 75%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#ventana .formulario #cerrar, #ventana-n .formulario #cerrar-n, #ventana-e .formulario #cerrar-e {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+#ventana .formulario .fila, #ventana-n .formulario .fila, #ventana-e .formulario .fila {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#ventana .formulario .fila .datocorto, #ventana-n .formulario .fila .datocorto, #ventana-e .formulario .fila .datocorto {
+    width: 45%;
+    text-align: left;
+ }
+
+ #ventana .formulario .datocorto, #ventana-n .formulario .datocorto, #ventana-e .formulario .datocorto {
+    width: 100%;
+    text-align: left;
+ }
+
+#ventana .formulario label, #ventana-n .formulario label, #ventana-e .formulario label {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: #9A9A9A;
+}
+ 
+#ventana .formulario input, #ventana-n .formulario input, #ventana-e .formulario input, #ventana .formulario select, #ventana-n .formulario select, #ventana-e .formulario select {
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: 2px solid #9A9A9A;
+    border-radius: 10px;
+    background:none;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+#ventana .formulario input:disabled, #ventana-n .formulario input:disabled, #ventana-e .formulario input:disabled {
+    border: 2px solid #FF9054;
+    color: black;
+    background-color: #F2F2F2;
+    cursor: not-allowed !important;
+}
+
+#ventana-n .formulario input:hover, #ventana-e .formulario input:hover, #ventana-n .formulario select:hover, #ventana-e .formulario select:hover {
+    border: 2px solid #FF9054;
+}
+
+#ventana .formulario select:disabled, #ventana-n .formulario select:disabled, #ventana-e .formulario select:disabled {
+    border: 2px solid #FF9054;
+    color: black;
+    font-weight: 600;
+    background-color: #F2F2F2;
+    cursor: not-allowed !important;
+}
+
+#ventana .formulario select option[disabled], #ventana-n .formulario select option[disabled], #ventana-e .formulario select option[disabled] {
+    display: none;
+}
+
+#ventana .formulario .datocorto textarea, #ventana-n .formulario .datocorto textarea, #ventana-e .formulario .datocorto textarea {
+    padding: 5px;
+    outline: none;
+    border: 2px solid #9A9A9A;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#ventana .formulario .datocorto textarea:hover, #ventana-n .formulario .datocorto textarea:hover, #ventana-e .formulario .datocorto textarea:hover {
+    border: 2px solid #FF9054;
+}
+
+#ventana-n .formulario .fila .datocorto input[type="file"], #ventana-e .formulario .fila .datocorto input[type="file"] {
+    width: 75%;
+    border: none;
+    border-radius: 0px;
+}
+
+#ventana .formulario .datocorto .mascota {
+    width: 70%;
+    height: 150px;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#ventana .formulario .datocorto .mascota img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#ventana-n .formulario .guardar-n, #ventana-e .formulario .guardar-e{
+    width: 20%;
+    height: 40px;
+
+    margin-top: 30px;
+    
+    /* Diseño */
+    background-color: #5799E3;
+    border: none;
+    border-radius: 5px;
+
+    /* Estilo de letra */
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+
+    /* Comportamiento */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+}
+
+
 /* ------------------------   
     Estilos Personalizados    
    ------------------------ */
@@ -315,6 +493,13 @@ body {
     font-size: 16px;
     font-weight: bold;
     margin-left: 15px;
+}
+
+/* Estilo del título de la ventana flotante */
+.titulo3 {
+    font-size: 36px;
+    font-weight: bold;
+    /* margin-left: 15px; */
 }
 
 
@@ -347,14 +532,15 @@ table {
 
 /* Estilo personalizado a la cabecera de la tabla */
 th {
+    height: 30px;
     border-radius: 5px;
     background-color: #F2F2F2;
 }
 
 /* Estilo personalizado a las celdas de la tabla */
-tr, td {
+td {
      /* Tamaño y Márgenes */
-     height: 30px;
+     height: 40px;
      padding: 0px 5px;
  
      /* Alineación y Diseño */
@@ -377,20 +563,24 @@ tr, td {
 }
 
 /* Tamaño perzonalizado a cada columna de la tabla */
-.nombre, .tipo {
+.nombre {
     width: 10%;
+}
+
+.tipo {
+    width: 8%;
 }
 
 .edad {
     width: 5%;
 }
 
-.tiempo, .sexo {
+.tiempo, .sexo, .imagen {
     width: 7%;
 }
 
 .adoptante, .fecha {
-    width: 12%;
+    width: 11%;
 }
 
 .accion {

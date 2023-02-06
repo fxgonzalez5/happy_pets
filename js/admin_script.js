@@ -45,9 +45,19 @@ window.onload = function () {
   var ventana = document.getElementById("ventana");
   var cerrar = document.getElementById("cerrar");
   var filas = document.querySelectorAll("table tr");
-
+  
   for (var i = 0; i < filas.length; i++) {
     filas[i].addEventListener("dblclick", function() {
+      // Crear un objeto de solicitud HTTP
+      var xhr = new XMLHttpRequest();
+  
+      // Configurar la solicitud
+      xhr.open("POST", "../../php/functions/hidden.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  
+      // Enviar la solicitud
+      xhr.send("id=" + window.valorSeleccionado + "&tabla=" + window.tablaSeleccionada);
+  
       ventana.showModal();
     });
   }
@@ -66,30 +76,27 @@ window.onload = function () {
 
   // Funcionamiento de la ventana emergente para editar un usuario
   var ventanaE = document.getElementById("ventana-e");
-  var id = document.getElementById("id-e");
   var cerrarE = document.getElementById("cerrar-e");
   var btnsEditar = document.querySelectorAll("#editar");
 
   btnsEditar.forEach(function(editar) {
     editar.addEventListener("click", function() {
       var numeroId = this.parentNode.parentNode.querySelector("td:first-child").innerHTML;
-      var tb = this.getAttribute('data-value')
+      var tb = this.getAttribute('data-value');
   
       // Crear un objeto de solicitud HTTP
       var xhr = new XMLHttpRequest();
   
       // Configurar la solicitud
-      xhr.open("POST", "", true);
+      xhr.open("POST", "../../php/functions/hidden.php", true);
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   
       // Enviar la solicitud
       xhr.send("id=" + numeroId + "&tabla=" + tb);
   
       ventanaE.showModal(); 
-      // console.log("El id de la persona es:" + idPersona);
     });
   });
   
-  id.value = 1;
   cerrarE.addEventListener("click", () => { ventanaE.close(); })
 }

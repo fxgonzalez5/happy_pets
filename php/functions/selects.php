@@ -12,12 +12,12 @@
     $sql = "SELECT COUNT(*) AS canceladas FROM `postulacion` WHERE estado = 3";
     $canceladas = $conexion->queryFor($sql)['canceladas'];
 
-    // Último identificador creado en la base datos
+    // Último identificador creado en la base datos para el usuario
     $sql = "SELECT MAX(idPersona) AS max_id FROM persona";
     $idUltimaPersona = $conexion->queryFor($sql)['max_id'];
 
-    // $sql = "SELECT p.idPersona, p.nombre, p.apellido, p.genero, p.celular, p.fechaNacimiento, u.nombreUsuario, u.correo, u.rol FROM persona p INNER JOIN usuario u ON (p.idPersona = u.idUsuario) WHERE idPersona = $id";
-    // $data = $conexion->queryFor($sql);
+    $sql = "SELECT MAX(idMascota) AS max_id FROM mascota";
+    $idUltimaMascota = $conexion->queryFor($sql)['max_id'];
 
     // Conteo de indicadores
     $postulaciones = $activas + $pendientes;
