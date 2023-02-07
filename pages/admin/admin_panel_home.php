@@ -47,259 +47,257 @@
                 <img src="../../images/logo_happy_pets.png" alt="Logo HappyPets" height="75">
             </div>
 
-            <!-- Título del Menu -->
-            <p class="titulo1">Menu</p>
+        <!-- Título del Menu -->
+        <p class="titulo1">Menu</p>
 
-            <!-- Opciones del Menu -->
-            <?php
-                echo "<a href='admin_panel_home.php?id=$idUsuario'>";
-            ?>
-                <div class="boton1">
-                    <iconify-icon class="icono-home" icon="fluent:home-24-regular" height="24"></iconify-icon>
-                    <p class="titulo2">Inicio</p>
-                </div>
-            </a>
+        <!-- Opciones del Menu -->
+        <?php
+            echo "<a href='admin_panel_home.php?id=$idUsuario'>";
+        ?>
+            <div class="boton1">
+                <iconify-icon class="icono-home" icon="fluent:home-24-regular" height="24"></iconify-icon>
+                <p class="titulo2">Inicio</p>
+            </div>
+        </a>
 
-            <?php
-                echo "<a href='admin_panel_animals.php?id=$idUsuario'>";
-            ?>
-                <div class="boton1">
-                    <iconify-icon icon="cil:animal" style="font-size: 24px;"></iconify-icon>
-                    <p class="titulo2">Animales</p>
-                </div>
-            </a>
+        <?php
+            echo "<a href='admin_panel_animals.php?id=$idUsuario'>";
+        ?>
+            <div class="boton1">
+                <iconify-icon icon="cil:animal" style="font-size: 24px;"></iconify-icon>
+                <p class="titulo2">Animales</p>
+            </div>
+        </a>
 
-            <?php
-                echo "<a href='admin_panel_persons.php?id=$idUsuario'>";
-            ?>
-                <div class="boton1">
-                    <iconify-icon icon="heroicons:user-group" style="font-size: 24px;"></iconify-icon>
-                    <p class="titulo2">Personas</p>
-                </div>
-            </a>
+        <?php
+            echo "<a href='admin_panel_persons.php?id=$idUsuario'>";
+        ?>
+            <div class="boton1">
+                <iconify-icon icon="heroicons:user-group" style="font-size: 24px;"></iconify-icon>
+                <p class="titulo2">Personas</p>
+            </div>
+        </a>
 
-            <?php
-                echo "<a href='admin_panel_postulants.php?id=$idUsuario'>";
-            ?>
-                <div class="boton1">
-                    <iconify-icon icon="teenyicons:text-document-outline" style="font-size: 24px;"></iconify-icon>
-                    <p class="titulo2">Postulantes</p>
-                </div>
-            </a>
+        <?php
+            echo "<a href='admin_panel_postulants.php?id=$idUsuario'>";
+        ?>
+            <div class="boton1">
+                <iconify-icon icon="teenyicons:text-document-outline" style="font-size: 24px;"></iconify-icon>
+                <p class="titulo2">Postulantes</p>
+            </div>
+        </a>
 
-            <a class="btn-salir" href="../../index.php">
-                <div class="boton1">
-                    <iconify-icon icon="humbleicons:logout" style="font-size: 24px;"></iconify-icon>
-                    <p class="titulo2">Cerrar Sesión</p>
-                </div>
-            </a>
+        <a class="btn-salir" href="../../index.php">
+            <div class="boton1">
+                <iconify-icon icon="humbleicons:logout" style="font-size: 24px;"></iconify-icon>
+                <p class="titulo2">Cerrar Sesión</p>
+            </div>
+        </a>
 
+    </div>
+
+    <!-- Contenedor del Navegador -->
+    <div class="barra-navegacion">
+        
+        <!-- Creación del Buscador -->
+        <div class="buscador">
+            <iconify-icon icon="material-symbols:search-rounded" style="font-size: 24px;"></iconify-icon>
+            <input type="search" name="buscar" placeholder="Buscar...">
         </div>
 
-        <!-- Contenedor del Navegador -->
-        <div class="barra-navegacion">
-            
-            <!-- Creación del Buscador -->
-            <div class="buscador">
-                <iconify-icon icon="material-symbols:search-rounded" style="font-size: 24px;"></iconify-icon>
-                <input type="search" name="buscar" placeholder="Buscar...">
+        <!-- Creación del Calendario -->
+        <!-- <div class="calendario">
+            <iconify-icon icon="radix-icons:calendar" style="font-size: 24px;"></iconify-icon>
+            <input type="date" name="fecha_inicial" >
+            <p>-</p>
+            <input type="date" name="fecha_final" >
+        </div> -->
+
+        <!-- Creación de las notificaciones -->
+        <!-- <div class="notifiacion">
+            <iconify-icon icon="ion:notifications-outline" style="font-size: 27px;"></iconify-icon>
+            <div class="circulo">
+                <p>1</p>
             </div>
+        </div> -->
 
-            <!-- Creación del Calendario -->
-            <!-- <div class="calendario">
-                <iconify-icon icon="radix-icons:calendar" style="font-size: 24px;"></iconify-icon>
-                <input type="date" name="fecha_inicial" >
-                <p>-</p>
-                <input type="date" name="fecha_final" >
-            </div> -->
-
-            <!-- Creación de las notificaciones -->
-            <!-- <div class="notifiacion">
-                <iconify-icon icon="ion:notifications-outline" style="font-size: 27px;"></iconify-icon>
-                <div class="circulo">
-                    <p>1</p>
-                </div>
-            </div> -->
-
-            <!-- Creación del boton para el panel de cuenta -->
-            <div class="cuenta">
+        <!-- Creación del boton para el panel de cuenta -->
+        <div class="cuenta">
+            <a href="./admin_perfil.php?id=<?php echo $idUsuario; ?>">
                 <?php
                     $conexion->imagenCuenta();
                 ?>
-            </div>
-
+            </a>
         </div>
 
-        <!-- Contenedor de la Tarjeta del Nuevo Usuario -->
-        <div class="tarjeta-usuario">
+    </div>
 
-            <!-- Creación de la parte superior de la tarjeta -->
-            <div class="cabecera-tarjeta">
-                <img src="../../images/admin/icons/add-user.png" width="24">
-                <p class="titulo-tarjeta">Nuevo Usuario</p>
-            </div>
-            
-            <!-- Creación de la parte central de la tarjeta -->
-            <?php
-                $conexion->nuevoUsuario();
-            ?>
+    <!-- Contenedor de la Tarjeta del Nuevo Usuario -->
+    <div class="tarjeta-usuario">
 
-            <!-- Creación de la parte inferior de tarjeta -->
-            <div class="pie-tarjeta">
-                <div class="contenido">
-                    <p class="porcentaje">50%&ThinSpace;</p>
-                    <p>Información Completada</p>
-                </div>
-
-                <div class="boton2">
-                    <p>Ver Perfil</p>
-                </div>
-            </div>
+        <!-- Creación de la parte superior de la tarjeta -->
+        <div class="cabecera-tarjeta">
+            <img src="../../images/admin/icons/add-user.png" width="24">
+            <p class="titulo-tarjeta">Nuevo Usuario</p>
         </div>
+        
+        <!-- Creación de la parte central de la tarjeta -->
+        <?php
+            $conexion->nuevoUsuario();
+        ?>
 
-        <!-- Contenedor de la Tarjeta de la Nueva Mascota -->
-        <div class="tarjeta-mascota">
-
-            <!-- Creación de la parte superior de la tarjeta -->
-            <div class="cabecera-tarjeta">
-                <img src="../../images/admin/icons/pet-care.png" width="24">
-                <p class="titulo-tarjeta">Nueva Mascota</p>
-            </div>
-            
-            <!-- Creación de la parte central de la tarjeta -->
-            <?php
-                $conexion->nuevaMascota();
-            ?>
-
-            <!-- Creación de la parte inferior de tarjeta -->
-            <div class="pie-tarjeta">
-                <div class="contenido">
-                    <p class="porcentaje">80%&ThinSpace;</p>
-                    <p>Completado</p>
-                </div>
-
-                <div class="boton2">
-                    <p>Ver Información</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contenedor de la Tarjeta de la Cantidades de Adopciones -->
-        <div class="tarjeta-adopciones">
-            
-            <!-- Creación de la parte superior de la tarjeta -->
-            <div class="cabecera-tarjeta">
-                <img src="../../images/admin/icons/house.png" width="24">
-                <p class="titulo-tarjeta">Adopciones</p>
-            </div>
-
-            <!-- Creación de la parte central de la tarjeta -->
+        <!-- Creación de la parte inferior de tarjeta -->
+        <div class="pie-tarjeta">
             <div class="contenido">
-                <?php
-                    include("../../php/functions/selects.php");
-                ?>
-                
-                <!-- Icono -->
-                <img src="../../images/admin/icons/thunderbolt.png" width="30">
-                
-                <!-- Texto -->
-                <div class="contenedor-cantidad">
-                    <p class="cantidad">
-                        <?php
-                            echo $activas;
-                        ?>
-                    </p>
-                    <p>Activas</p>
-                </div>
+                <p class="porcentaje">50%&ThinSpace;</p>
+                <p>Información Completada</p>
+            </div>
 
-                <img src="../../images/admin/icons/tick.png" width="30">
-                <div class="contenedor-cantidad">
-                    <p class="cantidad">
-                        <?php
-                            echo $completadas;
-                        ?>
-                    </p>
-                    <p>Completadas</p>
-                </div>
-
-                <img src="../../images/admin/icons/pending.png" width="30">
-                <div class="contenedor-cantidad">
-                    <p class="cantidad">
-                        <?php
-                            echo $pendientes;
-                        ?>
-                    </p>
-                    <p>Pendientes</p>
-                </div>
-
-                <img src="../../images/admin/icons/close.png" width="30">
-                <div class="contenedor-cantidad">
-                    <p class="cantidad">
-                        <?php
-                            echo $canceladas;
-                        ?>
-                    </p>
-                    <p>Canceladas</p>
-                </div>
+            <div class="boton2">
+                <p>Ver Perfil</p>
             </div>
         </div>
+    </div>
 
-        <!-- Contenedor de la Tarjeta del Listado de los Postulantes -->
-        <div class="tarjeta-postulantes">
+    <!-- Contenedor de la Tarjeta de la Nueva Mascota -->
+    <div class="tarjeta-mascota">
+
+        <!-- Creación de la parte superior de la tarjeta -->
+        <div class="cabecera-tarjeta">
+            <img src="../../images/admin/icons/pet-care.png" width="24">
+            <p class="titulo-tarjeta">Nueva Mascota</p>
+        </div>
+        
+        <!-- Creación de la parte central de la tarjeta -->
+        <?php
+            $conexion->nuevaMascota();
+        ?>
+
+        <!-- Creación de la parte inferior de tarjeta -->
+        <div class="pie-tarjeta">
+            <div class="contenido">
+                <p class="porcentaje">80%&ThinSpace;</p>
+                <p>Completado</p>
+            </div>
+
+            <div class="boton2">
+                <p>Ver Información</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de la Tarjeta de la Cantidades de Adopciones -->
+    <div class="tarjeta-adopciones">
+        
+        <!-- Creación de la parte superior de la tarjeta -->
+        <div class="cabecera-tarjeta">
+            <img src="../../images/admin/icons/house.png" width="24">
+            <p class="titulo-tarjeta">Adopciones</p>
+        </div>
+
+        <!-- Creación de la parte central de la tarjeta -->
+        <div class="contenido">
+            <?php
+                include("../../php/functions/selects.php");
+            ?>
+            
+            <!-- Icono -->
+            <img src="../../images/admin/icons/thunderbolt.png" width="30">
+            
+            <!-- Texto -->
+            <div class="contenedor-cantidad">
+                <p class="cantidad">
+                    <?php
+                        echo $activas;
+                    ?>
+                </p>
+                <p>Activas</p>
+            </div>
+
+            <img src="../../images/admin/icons/tick.png" width="30">
+            <div class="contenedor-cantidad">
+                <p class="cantidad">
+                    <?php
+                        echo $completadas;
+                    ?>
+                </p>
+                <p>Completadas</p>
+            </div>
+
+            <img src="../../images/admin/icons/pending.png" width="30">
+            <div class="contenedor-cantidad">
+                <p class="cantidad">
+                    <?php
+                        echo $pendientes;
+                    ?>
+                </p>
+                <p>Pendientes</p>
+            </div>
+
+            <img src="../../images/admin/icons/close.png" width="30">
+            <div class="contenedor-cantidad">
+                <p class="cantidad">
+                    <?php
+                        echo $canceladas;
+                    ?>
+                </p>
+                <p>Canceladas</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de la Tarjeta del Listado de los Postulantes -->
+    <div class="tarjeta-postulantes">
+
+        <!-- Creación de la parte superior de la tarjeta -->
+        <div class="cabecera-tarjeta">
+            <img src="../../images/admin/icons/verify.png" width="24">
+            <p class="titulo-tarjeta">Postulantes</p>
+            <a class="subtitulo-tarjeta" href="admin_panel_postulants.php?id=<?php echo $idUsuario; ?>">Ver todo</a>
+        </div>
+
+        <!-- Creación del contenido central de la tarjeta que corresponde a la tabla que contiene el listado de los postulantes -->
+        <?php
+            $conexion->postulantesInicio();
+        ?>
+    </div>
+
+    <!-- Contenedor de las dos tarjetas de la parte inferior -->
+    <div class="tablas">
+        <!-- Contenedor de la tarjeta del Listado de los Usuarios -->
+        <div class="tarjeta-inferior">
 
             <!-- Creación de la parte superior de la tarjeta -->
             <div class="cabecera-tarjeta">
-                <img src="../../images/admin/icons/verify.png" width="24">
-                <p class="titulo-tarjeta">Postulantes</p>
+                <img src="../../images/admin/icons/persons.png" width="24">
+                <p class="titulo-tarjeta">Usuarios</p>
                 <?php
-                    echo "<a class='subtitulo-tarjeta' href='admin_panel_postulants.php?id=$idUsuario'>Ver todo</a>";
+                    echo "<a class='subtitulo-tarjeta' href='admin_panel_persons.php?id=$idUsuario'>Ver todo</a>";
                 ?>
-                <a class="subtitulo-tarjeta" href="admin_panel_postulants.html">Ver todo</a>
             </div>
 
-            <!-- Creación del contenido central de la tarjeta que corresponde a la tabla que contiene el listado de los postulantes -->
+            <!-- Creación del contenido central de la tarjeta que corresponde a la tabla que contiene el listado de los usuarios -->
             <?php
-                $conexion->postulantesInicio();
+                $conexion->usuariosInicio();
             ?>
         </div>
 
-        <!-- Contenedor de las dos tarjetas de la parte inferior -->
-        <div class="tablas">
-            <!-- Contenedor de la tarjeta del Listado de los Usuarios -->
-            <div class="tarjeta-inferior">
+        <!-- Contenedor de la tarjeta del Listado de las Mascotas -->
+        <div class="tarjeta-inferior">
 
-                <!-- Creación de la parte superior de la tarjeta -->
-                <div class="cabecera-tarjeta">
-                    <img src="../../images/admin/icons/persons.png" width="24">
-                    <p class="titulo-tarjeta">Usuarios</p>
-                    <?php
-                        echo "<a class='subtitulo-tarjeta' href='admin_panel_persons.php?id=$idUsuario'>Ver todo</a>";
-                    ?>
-                </div>
-
-                <!-- Creación del contenido central de la tarjeta que corresponde a la tabla que contiene el listado de los usuarios -->
+            <!-- Creación de la parte superior de la tarjeta -->
+            <div class="cabecera-tarjeta">
+                <img src="../../images/admin/icons/pets.png" width="24">
+                <p class="titulo-tarjeta">Mascotas</p>
                 <?php
-                    $conexion->usuariosInicio();
+                    echo "<a class='subtitulo-tarjeta' href='admin_panel_animals.php?id=$idUsuario'>Ver todo</a>";
                 ?>
             </div>
 
-            <!-- Contenedor de la tarjeta del Listado de las Mascotas -->
-            <div class="tarjeta-inferior">
-
-                <!-- Creación de la parte superior de la tarjeta -->
-                <div class="cabecera-tarjeta">
-                    <img src="../../images/admin/icons/pets.png" width="24">
-                    <p class="titulo-tarjeta">Mascotas</p>
-                    <?php
-                        echo "<a class='subtitulo-tarjeta' href='admin_panel_animals.php?id=$idUsuario'>Ver todo</a>";
-                    ?>
-                </div>
-
-                <!-- Creación del contenido central de la tarjeta que corresponde a la tabla que contiene el listado de los usuarios -->
-                <?php
-                    $conexion->mascotasInicio();
-                ?>
-            </div>
+            <!-- Creación del contenido central de la tarjeta que corresponde a la tabla que contiene el listado de los usuarios -->
+            <?php
+                $conexion->mascotasInicio();
+            ?>
         </div>
     </div>
 </body>

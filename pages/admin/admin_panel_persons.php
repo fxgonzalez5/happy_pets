@@ -174,12 +174,10 @@
             </button>
         </div>
 
-        <div class="contenedor">
-            <div class="tabla">
-                <?php
-                    $conexion->personas();
-                ?>
-            </div>
+        <div class="tabla">
+            <?php
+                $conexion->personas();
+            ?>
         </div>
 
         <!-- Ventana flotante para ver la información de un usuario  -->
@@ -278,31 +276,31 @@
 
                         <div class="datocorto">
                             <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre">
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label for="apellido">Apellido</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Ingrese el apellido">
+                            <input type="text" id="apellido" name="apellido" placeholder="Ingrese el apellido" required>
                         </div>
 
                         <div class="datocorto">
                             <label for="usuario">Usuario</label>
-                            <input type="text" id="usuario" name="usuario" placeholder="Ingrese un nombre de usuario">
+                            <input type="text" id="usuario" name="usuario" placeholder="Ingrese un nombre de usuario" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label for="fecha">Fecha de Nacimiento</label>
-                            <input type="date" id="fecha" name="fecha">
+                            <input type="date" id="fecha" name="fecha" required>
                         </div>
 
                         <div class="datocorto">
                             <label for="genero">Género</label>
-                            <select name="genero" id="genero">
+                            <select name="genero" id="genero" required>
                                 <option disabled selected>Seleccione el género</option>
                                 <option value="M">Masculino</option>
                                 <option value="F">Femenino</option>
@@ -312,18 +310,18 @@
 
                     <div class="datolargo">
                         <label for="correo">Correo Electrónico</label>
-                        <input type="email" id="correo" name="correo" placeholder="Ingrese el correo electrónico">
+                        <input type="email" id="correo" name="correo" placeholder="Ingrese el correo electrónico" required>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label for="celular">Celular</label>
-                            <input type="text" id="celular" name="celular" placeholder="Ingrese el número celular">
+                            <input type="text" id="celular" name="celular" placeholder="Ingrese el número celular" required>
                         </div>
 
                         <div class="datocorto">
                             <label for="rol">Rol</label>
-                            <select name="rol" id="rol">
+                            <select name="rol" id="rol" required>
                             <option disabled selected>Seleccione el rol</option>
                                 <option value="0">Administrador</option>
                                 <option value="1">Usuario</option>
@@ -331,7 +329,7 @@
                         </div>
                     </div>
 
-                    <button class="guardar-n">
+                    <button type="submit" class="guardar-n">
                         <iconify-icon icon="material-symbols:save-outline-rounded" style="font-size: 25px;"></iconify-icon>
                         Guardar
                     </button>

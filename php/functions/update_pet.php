@@ -17,9 +17,11 @@
     $tiempo = $_POST['tiempo'];
     $descripcion = $_POST['descripcion'];
     $imagen = $_FILES["imagen"]["name"];
+    $adoptante = $_POST['adoptante'];
+    $fecha = $_POST['fecha'];
 
     // Insersión de los datos de la mascota
-    $sql = "UPDATE mascota SET `nombre` = '$nombre', `tipo` = '$tipo', `edad` = '$edad', `tiempo` = '$tiempo', `sexo` = '$sexo', `descripcion` = '$descripcion' WHERE idMascota = $id";
+    $sql = "UPDATE mascota SET `nombre` = '$nombre', `tipo` = '$tipo', `edad` = '$edad', `tiempo` = '$tiempo', `sexo` = '$sexo', `descripcion` = '$descripcion', `idPostulante` = '$adoptante', `fechaAdopcion` = '$fecha' WHERE idMascota = $id";
 
     // Obtención del resultado de la consulta sql 
     $resSQL = $conexion->query($sql);

@@ -59,13 +59,8 @@
         <p class="titulo">Mascotas Que Anhelan Ser Adoptadas</p>
         <div class="mascotas">
             <?php
-                //$conexion->mascotaHome();
+                $conexion->mascotaHome();
             ?>
-
-            <!-- Aplica el voltero de la tarjeta a estas imágenes -->
-            <div class="mascota"><img src="images/img_mascota1.jpg"></div>  
-            <div class="mascota"><img src="images/img_mascota2.jpg"></div>  
-            <div class="mascota"><img src="images/img_mascota3.jpg"></div> 
         </div>
     </div>
 

@@ -3,22 +3,25 @@ body {
     background-color: #F2F2F2;
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
 }
   
 /* Contenedor de todo el contenido dentro de la pantalla */
 .contenido-general{
-    padding: 25px;
+    width: 97%;
+    height: 95%;
+    margin: auto;
 
     /* Creación de una tabla para ubicar cada elemento o componente */
     display: grid;
-	grid-template-columns: 20% 80%;
-	grid-template-rows: 12.5% 11% 100%;
-	grid-gap: 0px;
 
     grid-template-areas:    "menulat    barra"
                             "menulat    filtros"
-                            "menulat    tabla"
+                            "menulat    tabla";
 
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto 82%;
 }
 
 /* ------   
@@ -29,10 +32,6 @@ body {
 .menu {
     /* Asignación del área correspondiente al contenedor dentro de la grilla o tabla */
     grid-area: menulat;
-
-    /* Tamaño al contenedor */
-    width: auto;
-    height: 99%;
 
     /* Márgenes al contenedor */
     margin-right: 10px;
@@ -246,28 +245,22 @@ body {
     Tabla    
    ------- */
 
-/* Comprtamiento a un contenedor vacío que contiene a otro contenedor que a su vez tiene como hijo la tabla, para que no se salga del los márgenes de la pantalla */
-.contenedor {
-    display: flex;
-}
-
 /* Estilo al contenedor de la tabla */
-.contenedor .tabla {
+ .tabla {
     grid-area: tabla;
 
-    width: 100%;
-    height: 95%;
+    height: 91.5%;
     margin-top: 20px;
     padding: 15px;
     background-color: white;
     border-radius: 10px;
     font-size: 14px;
-    display: flex;
-    flex-direction: column;
+    
+    overflow-y: auto;
 }
 
 /* Estilo al boton editar */
-.contenedor .tabla .editar {
+ .tabla .editar {
      /* Tamaño */
      width: 100%;
      height: 100%;

@@ -185,13 +185,12 @@
             </button>
         </div>
 
-        <div class="contenedor">
-            <div class="tabla">
-                <?php
-                    $conexion->animales();
-                ?>
-            </div>
+        <div class="tabla">
+            <?php
+                $conexion->animales();
+            ?>
         </div>
+
     
         <!-- Ventana flotante para ver la información de la mascota  -->
         <dialog id="ventana">
@@ -318,14 +317,14 @@
 
                         <div class="datocorto">
                             <label for="mascota">Nombre</label>
-                            <input type="text" id="mascota" name="mascota" placeholder="Ingrese el nombre de la mascota">
+                            <input type="text" id="mascota" name="mascota" placeholder="Ingrese el nombre de la mascota" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label for="tipo">Tipo</label>
-                            <select id="tipo" class="tipo" name="tipo">
+                            <select id="tipo" class="tipo" name="tipo" required>
                                 <option disabled selected>Seleccione un tipo</option>
                                 <option value=1>Mamífero</option>
                                 <option value=2>Ave</option>
@@ -337,14 +336,14 @@
 
                         <div class="datocorto">
                             <label for="edad">Edad</label>
-                            <input type="number" id="edad" name="edad" placeholder="Ingrese la edad de la mascota">
+                            <input type="number" id="edad" name="edad" placeholder="Ingrese la edad de la mascota" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label form="sexo">Sexo</label>
-                            <select id="sexo" name="sexo">
+                            <select id="sexo" name="sexo" required>
                                 <option disabled selected>Seleccione el sexo de la mascota</option>
                                 <option value='M'>Macho</option>
                                 <option value='H'>Hembra</option>
@@ -353,7 +352,7 @@
 
                         <div class="datocorto">
                             <label for="tiempo">Tiempo</label>
-                            <select id="tiempo" name="tiempo">
+                            <select id="tiempo" name="tiempo" required>
                                 <option disabled selected>Seleccione el tiempo de la edad</option>
                                 <option value='D'>Días</option>
                                 <option value='M'>Meses</option>
@@ -365,24 +364,12 @@
                     <div class="fila">
                         <div class="datocorto">
                             <label for="descripcion">Descripción</label>
-                            <textarea id="descripcion" name="descripcion" cols="22" rows="3"></textarea>
+                            <textarea id="descripcion" name="descripcion" cols="22" rows="3" required></textarea>
                         </div>
 
                         <div class="datocorto">
                             <label for="imagen">Seleccione la imagen:</label>
-                            <input type="file" class="input-file" name="imagen" id="imagen">
-                        </div>
-                    </div>
-
-                    <div class="fila">
-                        <div class="datocorto">
-                            <label for="adoptante">Adoptante</label>
-                            <input type="text" id="adoptante" name="adoptante" value="No tiene" disabled>
-                        </div>
-
-                        <div class="datocorto">
-                            <label class="fecha">Fecha de Adpción</label>
-                            <input type="date" id="fecha" name="fecha" disabled>
+                            <input type="file" class="input-file" name="imagen" id="imagen" required>
                         </div>
                     </div>
 
@@ -408,14 +395,14 @@
 
                         <div class="datocorto">
                             <label for="mascota">Nombre</label>
-                            <input type="text" id="mascota" name="mascota" value="<?php echo $mascota; ?>" placeholder="Ingrese el nombre de la mascota">
+                            <input type="text" id="mascota" name="mascota" value="<?php echo $mascota; ?>" placeholder="Ingrese el nombre de la mascota" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label for="tipo">Tipo</label>
-                            <select id="tipo" class="tipo" name="tipo">
+                            <select id="tipo" class="tipo" name="tipo" required>
                                 <?php
                                     switch ($tipo) {
                                         case 1:
@@ -460,14 +447,14 @@
 
                         <div class="datocorto">
                             <label for="edad">Edad</label>
-                            <input type="number" id="edad" name="edad" value="<?php echo $edad ?>" placeholder="Ingrese la edad de la mascota">
+                            <input type="number" id="edad" name="edad" value="<?php echo $edad ?>" placeholder="Ingrese la edad de la mascota" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label form="sexo">Sexo</label>
-                            <select id="sexo" name="sexo">
+                            <select id="sexo" name="sexo" required>
                                 <?php 
                                     if ($sexo == "M") {
                                         echo "<option value='M' selected>Macho</option>";
@@ -482,7 +469,7 @@
 
                         <div class="datocorto">
                             <label for="tiempo">Tiempo</label>
-                            <select id="tiempo" name="tiempo">
+                            <select id="tiempo" name="tiempo" required>
                                 <?php 
                                     switch ($tiempo) {
                                         case 'D':
@@ -509,7 +496,7 @@
                     <div class="fila">
                         <div class="datocorto">
                             <label for="descripcion">Descripción</label>
-                            <textarea id="descripcion" name="descripcion" cols="22" rows="3"><?php echo $descripcion; ?></textarea>
+                            <textarea id="descripcion" name="descripcion" cols="22" rows="3" required><?php echo $descripcion; ?></textarea>
                         </div>
 
                         <div class="datocorto">
@@ -521,12 +508,17 @@
                     <div class="fila">
                         <div class="datocorto">
                             <label for="adoptante">Adoptante</label>
-                            <input type="text" id="adoptante" name="adoptante" value="<?php echo $adoptante; ?>" disabled>
+                            <select name="adoptante" id="adoptante">
+                                <option disabled selected>Ninguno</option>";
+                                <?php
+                                    $conexion->seleccionPostulante();
+                                ?>
+                            </select>
                         </div>
 
                         <div class="datocorto">
                             <label class="fecha">Fecha de Adpción</label>
-                            <input type="date" id="fecha" name="fecha" value="<?php echo $fechaAdopcion; ?>" disabled>
+                            <input type="date" id="fecha" name="fecha" value="<?php echo date("Y-m-d" , strtotime($fechaAdopcion)); ?>">
                         </div>
                     </div>
 

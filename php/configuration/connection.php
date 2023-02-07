@@ -115,7 +115,7 @@
         function listaPostulantes() {
             $sql = "SELECT `nombre`, `apellido`, `mascota`, `fecha` FROM postulaciones ORDER BY idPersona DESC";
             $consultaId = $this->query($sql);
-            $conteo = 0;
+            $conteo = 1;
 
             while ($row = mysqli_fetch_array($consultaId)) {
                 echo "<tr>";
@@ -145,9 +145,9 @@
     
             // Validación de la imagen
             if ($imagen){
-                echo "<img src='../../images/admin/$imagen' alt='Cuenta'>";
+                echo "<img src='../../images/admin/$imagen?id=$idUsuario' alt='Cuenta'>";
             } else {
-                echo "<img src='../../images/admin/usuario.png' alt='Cuenta'>";
+                echo "<img src='../../images/admin/usuario.png?id=$idUsuario' alt='Cuenta'>";
             }
         }
 
@@ -510,7 +510,10 @@
                 echo "<td class='imagen'><div class='mascota'><img src='../../images/$row[3]'></div></td>";
                 echo "<td class='espacio-columnas'></td>";
                 if ($row[8]) {
-                    echo "<td class='adoptante'>$row[8]</td>";
+                    $sql = "SELECT nombre, apellido FROM persona WHERE idPersona = $row[8]";
+                    $data = $this->queryFor($sql);
+
+                    echo "<td class='adoptante'>" . $data['nombre'] . " " . $data['apellido'] . "</td>";
                 } else {
                     echo "<td class='adoptante'>Ninguno</td>";
                 }
@@ -532,6 +535,15 @@
                 echo "<tr class='espacio-filas'></tr>";
             }
             echo "</table>";
+        }
+
+        function seleccionPostulante () {
+            $sql = "SELECT p.idPersona, p.nombre FROM persona p INNER JOIN postulante po ON (p.idPersona = po.idPostulante)";
+            $consultaId = $this->query($sql);
+
+            while ($row = mysqli_fetch_array($consultaId)) {
+                echo "<option value='$row[0]'>$row[1]</option>";
+            }
         }
 
         function personas() {
