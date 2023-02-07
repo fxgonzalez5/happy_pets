@@ -511,7 +511,7 @@
                             <select name="adoptante" id="adoptante">
                                 <option disabled selected>Ninguno</option>";
                                 <?php
-                                    $conexion->seleccionPostulante();
+                                    $conexion->seleccionPostulante($idMascota);
                                 ?>
                             </select>
                         </div>

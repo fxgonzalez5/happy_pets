@@ -75,7 +75,7 @@
             <div class="cantidad">
                 <p class="numero">
                     <?php
-                        echo $activas;
+                        echo $completadas;
                     ?>
                 </p>
                 <p class="tipo">Adopciones</p>

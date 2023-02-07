@@ -510,7 +510,7 @@
                 echo "<td class='imagen'><div class='mascota'><img src='../../images/$row[3]'></div></td>";
                 echo "<td class='espacio-columnas'></td>";
                 if ($row[8]) {
-                    $sql = "SELECT nombre, apellido FROM persona WHERE idPersona = $row[8]";
+                    $sql = "SELECT nombre, apellido FROM postulaciones WHERE idPersona = $row[8]";
                     $data = $this->queryFor($sql);
 
                     echo "<td class='adoptante'>" . $data['nombre'] . " " . $data['apellido'] . "</td>";
@@ -537,8 +537,8 @@
             echo "</table>";
         }
 
-        function seleccionPostulante () {
-            $sql = "SELECT p.idPersona, p.nombre FROM persona p INNER JOIN postulante po ON (p.idPersona = po.idPostulante)";
+        function seleccionPostulante ($idMascota) {
+            $sql = "SELECT idPersona, nombre FROM postulaciones WHERE idMascota = '$idMascota'";
             $consultaId = $this->query($sql);
 
             while ($row = mysqli_fetch_array($consultaId)) {
