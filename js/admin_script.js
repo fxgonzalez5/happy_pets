@@ -45,9 +45,59 @@ window.onload = function () {
   var ventana = document.getElementById("ventana");
   var cerrar = document.getElementById("cerrar");
   var filas = document.querySelectorAll("table tr");
+
+  // Funcionamiento de la ventana emergente para editar una postulación
+  var ventanaP = document.getElementById("ventana-p");
+  var cerrarP = document.getElementById("cerrar-p");
+  
   
   for (var i = 0; i < filas.length; i++) {
-    filas[i].addEventListener("dblclick", function() {
+    filas[i].addEventListener("dblclick", function(e) {
+
+      if (window.tablaSeleccionada == "postulante") {
+        var target = e.target.parentNode;
+        var target = e.target.parentNode;
+        var idPersona = target.cells[0].innerHTML;
+        var idMascota = target.cells[1].innerHTML;
+        var numero = target.cells[2].innerHTML;
+        var persona = target.cells[4].innerHTML;
+        var mascota = target.cells[6].innerHTML;
+        var edad = target.cells[8].innerHTML;
+        var sexo = target.cells[10].innerHTML;
+        var celular = target.cells[12].innerHTML;
+        var correo = target.cells[14].innerHTML;
+        switch (target.cells[16].innerHTML) {
+            case "Activa":
+                var estado = 0;
+                break;
+            case 'Completada':
+                var estado = 1;
+                break;
+            case 'Pendiente':
+                var estado = 2;
+                break;
+            case 'Cancelada':
+                var estado = 3;
+                break;
+        }
+        var fecha = target.cells[18].innerHTML;
+        
+        document.getElementById("idPos").value = idPersona;
+        document.getElementById("idMas").value = idMascota;
+        document.getElementById("numero").value = numero;
+        document.getElementById("persona").value = persona;
+        document.getElementById("mascota").value = mascota;
+        document.getElementById("celular").value = celular;
+        document.getElementById("edad").value = edad;
+        document.getElementById("correo").value = correo;
+        document.getElementById("sexo").value = sexo;
+        document.getElementById("estado").value = estado;
+        document.getElementById("fecha").value = fecha;
+
+        ventanaP.showModal();
+        cerrarP.addEventListener("click", () => { ventanaP.close(); });
+
+      }
       // Crear un objeto de solicitud HTTP
       var xhr = new XMLHttpRequest();
   
@@ -61,9 +111,8 @@ window.onload = function () {
       ventana.showModal();
     });
   }
-
-  cerrar.addEventListener("click", () => { ventana.close(); })
-
+  
+  cerrar.addEventListener("click", () => { ventana.close(); });  
 
   // Funcionamiento de la ventana emergente para crear un nuevo usuario
   var ventanaN = document.getElementById("ventana-n");

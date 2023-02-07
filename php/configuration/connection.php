@@ -663,11 +663,7 @@
                 echo "<tr id='fila' data-value='postulante'>";
 
                 // Columnas ocultas para obtener el id de la persona y de la mascota para poder editar la postulación como también eliminarla
-                if ($conteo < 10) {
-                    echo "<td style='display:none;'>0$row[0]</td>";
-                } else {
-                    echo "<td style='display:none;'>$row[0]</td>";
-                }
+                echo "<td style='display:none;'>$row[0]</td>";
                 echo "<td style='display:none;'>$row[5]</td>";
                 if ($conteo < 10) {
                     echo "<td class='id'>0$conteo</td>";

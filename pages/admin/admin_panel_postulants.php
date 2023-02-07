@@ -175,13 +175,85 @@
             </button>
         </div>
 
-        <div class="contenedor">
-            <div class="tabla">
-                <?php
-                    $conexion->postulantes();
-                ?>
-            </div>
+        <div class="tabla">
+            <?php
+                $conexion->postulantes();
+            ?>
         </div>
+
+        <!-- Ventana flotante para ver la información de un usuario  -->
+        <dialog id="ventana-p">
+            <div class="cuadro">
+                <form class="formulario" method="post" action="../../php/functions/update_postulation.php?id=<?php echo $idUsuario; ?>">
+                    <img id="cerrar-p" src="../../images/admin/icons/cancel.png" alt="Cerrar" width="35px">
+                    <p class="titulo3">Información de la Postulación</p>
+                    <div class="datocorto">
+                        <label>Número</label>
+                        <input type="text" id="numero" disabled>
+                        <input type="hidden" id="idPos" name="idPos">
+                        <input type="hidden" id="idMas" name="idMas">
+                    </div>
+
+                    <div class="fila">
+                        <div class="datocorto">
+                            <label>Persona</label>
+                            <input type="text" id="persona" disabled>
+                        </div>
+
+                        <div class="datocorto">
+                            <label>Mascota</label>
+                            <input type="text" id="mascota" disabled>
+                        </div>
+                    </div>
+
+                    <div class="fila">
+                        <div class="datocorto">
+                            <label>Celular</label>
+                            <input type="text" id="celular" disabled>
+                        </div>
+
+                        <div class="datocorto">
+                            <label>Edad</label>
+                            <input type="text" id="edad" disabled>
+                        </div>
+                    </div>
+
+                    <div class="fila">
+                        <div class="datocorto">
+                            <label>Correo Electrónico</label>
+                            <input type="text" id="correo" disabled>
+                        </div>
+
+                        <div class="datocorto">
+                            <label>Sexo</label>
+                            <input type="text" id="sexo" disabled>
+                        </div>
+                    </div>
+
+                    <div class="fila">
+                        <div class="datocorto">
+                            <label>Estado de la Postulación</label>
+                            <select name="estado" id="estado">
+                                <option value=0>Activa</option>
+                                <option value=1>Completada</option>
+                                <option value=2>Pendiente</option>
+                                <option value=3>Cancelada</option>
+                            </select>
+                        </div>
+
+                        <div class="datocorto">
+                            <label>Fecha</label>
+                            <input type="text" id="fecha" disabled>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="guardar">
+                        <iconify-icon icon="material-symbols:save-outline-rounded" style="font-size: 25px;"></iconify-icon>
+                        Guardar
+                    </button>
+                </form>
+            </div>
+        </dialog>
     </div>
 
     <!-- Importación de código -->
