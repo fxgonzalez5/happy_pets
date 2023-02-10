@@ -132,5 +132,8 @@
             <a href=""><iconify-icon icon="ic:outline-tiktok"></iconify-icon></a>
         </nav>
     </footer>
+
+    <!-- Importación de código -->
+    <script src="./js/interface_script.js"></script>
 </body>
 </html>

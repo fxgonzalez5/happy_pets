@@ -53,7 +53,7 @@
     if ($resSQL == "") {
         echo "Problemas de ejecución del SQL";
     } else {
-        echo '<script>alert("Se ha registrado exitosamente su postulación");</script>';
+        echo "<script>alert('Se ha registrado exitosamente su postulación');</script>";
         echo "<script>location.href='../../pages/interface/postulation_page.php?id=$idMascota'</script>";
     }
 ?>

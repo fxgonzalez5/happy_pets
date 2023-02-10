@@ -16,38 +16,44 @@
 	$rep_contrasenia    = $_POST['rep_contrasenia'];
     $celular            = $_POST['celular'];
     $fecha              = $_POST['fecha'];
-    
-    $rep_contrasenia = md5($rep_contrasenia);
 
-    // Insersión de los datos de la persona
-    $sqlp = "INSERT INTO persona values ('','$nombre','$apellido','$genero','$celular','$fecha')";
-    
-    // Obtención del resultado de la consulta sql 
-    $resSQL = $conexion->query($sqlp);
+    if ($contrasenia == $rep_contrasenia){
+        $rep_contrasenia = md5($rep_contrasenia);
 
-    // Validación de posible error
-    if ($resSQL == "") {
-        echo "Problemas de ejecución del SQL";
-    }
+        // Insersión de los datos de la persona
+        $sqlp = "INSERT INTO persona values ('','$nombre','$apellido','$genero','$celular','$fecha')";
+        
+        // Obtención del resultado de la consulta sql 
+        $resSQL = $conexion->query($sqlp);
 
-    // Consulta de la última persona insertada
-    $id = "SELECT MAX(idPersona) AS max_id FROM persona";
+        // Validación de posible error
+        if ($resSQL == "") {
+            echo "Problemas de ejecución del SQL";
+        }
 
-    // Extracción del identificador de la última persona ingresada
-    $idPersona = $conexion->queryFor($id)['max_id'];
+        // Consulta de la última persona insertada
+        $id = "SELECT MAX(idPersona) AS max_id FROM persona";
 
-    // Insersión de los datos del usuario
-    $sqlu = "INSERT INTO usuario (`idUsuario`, `correo`, `nombreUsuario`, `contraseña`) values ('$idPersona', '$correo', '$usuario', '$rep_contrasenia')";
+        // Extracción del identificador de la última persona ingresada
+        $idPersona = $conexion->queryFor($id)['max_id'];
 
-    // Obtención del resultado de la consulta sql 
-    $resSQL = $conexion->query($sqlu);
+        // Insersión de los datos del usuario
+        $sqlu = "INSERT INTO usuario (`idUsuario`, `correo`, `nombreUsuario`, `contraseña`) values ('$idPersona', '$correo', '$usuario', '$rep_contrasenia')";
 
-    // Validación de posible error
-    if ($resSQL == "") {
-        echo "Problemas de ejecución del SQL";
+        // Obtención del resultado de la consulta sql 
+        $resSQL = $conexion->query($sqlu);
+
+        // Validación de posible error
+        if ($resSQL == "") {
+            echo "Problemas de ejecución del SQL";
+        } else {
+            // TODO: Cambiar la ruta para el panel de administración del usuario
+            echo "<script>location.href='../../pages/admin/admin_panel_home.php?id=$idPersona'</script>";
+        }
     } else {
-        // TODO: Cambiar la ruta para el panel de administración del usuario
-        echo "<script>location.href='../../pages/admin/admin_panel_home.php?id=$idPersona'</script>";
+        echo "<script>alert('Las contraseñas ingeresadas no coinciden, por favor intente de nuevo...');</script>";
+        echo "<script>location.href='../../pages/guard/sign_in_page.html'</script>";
+
     }
 
 ?>

@@ -268,12 +268,14 @@ body {
 .tabla {
     grid-area: tabla;
 
-    height: 91.5%;
+    height: 96.5%;
     margin-top: 20px;
     padding: 15px;
     background-color: white;
     border-radius: 10px;
     font-size: 14px;
+
+    overflow-y: auto;
 }
 
 /* Color especifico a las celdas que contienen el estado del proceso de adopción de una mascota en 'Activa' */
@@ -385,7 +387,7 @@ body {
     text-align: center;
 }
 
-#ventana-p .formulario input:disabled {
+#ventana-p .formulario input:disabled, #ventana-p .formulario select:disabled {
     border: 2px solid #FF9054;
     color: black;
     background-color: #F2F2F2;
@@ -485,7 +487,7 @@ th {
 /* Estilo personalizado a las celdas de la tabla */
 tr, td {
      /* Tamaño y Márgenes */
-     height: 30px;
+     height: 35px;
      padding: 0px 5px;
  
      /* Alineación y Diseño */
@@ -502,7 +504,7 @@ tr, td {
 
 /* Estilo a las celdas de la columna que contienen el identificador de cada entidad */
 .id {
-    width: 30px;
+    width: 35px;
     background-color: #F2F2F2;
     border: 3px solid #F2F2F2;
 }
@@ -525,7 +527,7 @@ tr, td {
 }
 
 .estado {
-    width: 8%;
+    width: 8.5%;
 }
 
 .fecha {

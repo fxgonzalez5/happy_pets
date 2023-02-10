@@ -16,6 +16,7 @@
     $sql = "SELECT MAX(idPersona) AS max_id FROM persona";
     $idUltimaPersona = $conexion->queryFor($sql)['max_id'];
 
+    // Último identificador creado en la base datos para la mascota
     $sql = "SELECT MAX(idMascota) AS max_id FROM mascota";
     $idUltimaMascota = $conexion->queryFor($sql)['max_id'];
 

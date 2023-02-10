@@ -43,7 +43,7 @@
             <div class="corte"></div>
 
             <!-- parte izquierda de la tarjeta -->
-            <form class="formulario" method="post" action="../../php/functions/insert_user.php">
+            <form id="formulario" class="formulario" method="post" action="../../php/functions/insert_user.php">
 
                 <!-- título de la tarjeta y logo de la pagina -->
                 <div class="superior">
@@ -53,24 +53,24 @@
                 
                 <!-- cajas de texto -->
                 <div class="fila">
-                    <div class="datocorto">
+                    <div id="dato-nombre" class="datocorto vacio">
                         <label for="nombre">Nombre <span class="obligatorio">*</span></label>
                         <input type="text" id="nombre" name="nombre" placeholder="p.ej. Kevin" required>
                     </div>
 
-                    <div class="datocorto">
+                    <div id="dato-apellido" class="datocorto vacio">
                         <label for="apellido">Apellido <span class="obligatorio">*</span></label>
                         <input type="text" id="apellido" name="apellido" placeholder="p.ej. Cabrera" required>
                     </div>
                 </div>
 
                 <div class="fila">
-                    <div class="datocorto">
+                    <div id="dato-usuario" class="datocorto vacio">
                         <label for="usuario">Nombre de Usuario</label>
                         <input type="text" id="usuario" name="usuario" placeholder="p.ej. krcabrera3">
                     </div>
 
-                    <div class="datocorto">
+                    <div id="dato-genero" class="datocorto vacio">
                         <label for="genero">Género</label>
                         <select id="genero" name="genero">
                             <option disabled selected>Seleccione su género</option>
@@ -80,30 +80,35 @@
                     </div>
                 </div>
 
-                <div class="datolargo">
+                <div id="dato-correo" class="datolargo vacio">
                     <label for="correo">Correo Electrónico <span class="obligatorio">*</span></label>
                     <input type="email" id="correo" name="correo" placeholder="p.ej. krcabrera3@hotmail.com" required>
                 </div>
                 
                 <div class="fila">
-                    <div class="datocorto">
-                        <label for="contrasenia">Contraseña <span class="obligatorio">*</span></label>
-                        <input type="password" id="contrasenia" name="contrasenia" placeholder="Mínimo 8 caractéres" required>
+                    <div class="error">
+                        <div id="dato-contrasenia" class="datocorto vacio">
+                            <label for="contrasenia">Contraseña <span class="obligatorio">*</span></label>
+                            <input type="password" id="contrasenia" name="contrasenia" placeholder="Mínimo 8 caractéres" required>
+                        </div>
                     </div>
 
-                    <div class="datocorto">
-                        <label for="rep_contrasenia">Confirmar Contraseña <span class="obligatorio">*</span></label>
-                        <input type="password" id="rep_contrasenia" name="rep_contrasenia" placeholder="Repite la contraseña" required>
+                    <div class="error">
+                        <div id="dato-rep_contrasenia" class="datocorto vacio">
+                            <label for="rep_contrasenia">Confirmar Contraseña <span class="obligatorio">*</span></label>
+                            <input type="password" id="rep_contrasenia" name="rep_contrasenia" placeholder="Repite la contraseña" required>
+                        </div>
+                        <small class="oculto">Error message</small>
                     </div>
                 </div>
 
                 <div class="fila">
-                    <div class="datocorto">
+                    <div id="dato-celular" class="datocorto vacio">
                         <label for="celular">Número de Celular <span class="obligatorio">*</span></label>
                         <input type="tel" id="celular" name="celular" placeholder="p.ej. +593 999999999" required>
                     </div>
 
-                    <div class="datocorto">
+                    <div id="dato-fecha" class="datocorto vacio">
                         <label for="fecha">Fecha de Nacimiento <span class="obligatorio">*</span></label>
                         <input type="date" id="fecha" name="fecha" required>
                     </div>
@@ -111,7 +116,7 @@
 
                 <!-- botones para cancelar y confirmar el registro -->
                 <div class="inferior">
-                    <button type="reset" onclick="window.location.href='../../index.html'">Cancelar</button>
+                    <button type="reset" onclick="window.location.href='../../index.php'">Cancelar</button>
                     <button type="submit">Confirmar</button>
                 </div>
                 
@@ -130,6 +135,8 @@
             </form>
         </div>
     </div>
-</body>
 
+    <!-- Importación de código -->
+    <script src="../../js/sign_in_script.js"></script>
+</body>
 </html>

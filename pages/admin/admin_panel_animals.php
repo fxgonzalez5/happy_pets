@@ -42,7 +42,6 @@
 
         // Importación de los selects para obtener los datos de la mascota
         include("../../php/functions/selects.php");
-        include("../../php/functions/select_data.php");
     ?>
     
     <div class="contenido-general">
@@ -201,102 +200,60 @@
                     <div class="fila">
                         <div class="datocorto">
                             <label>Número</label>
-                            <input type="text" value="<?php echo $idMascota ?>" disabled>
+                            <input type="text" id="id" disabled>
                         </div>
 
                         <div class="datocorto">
                             <label>Nombre</label>
-                            <input type="text" value="<?php echo $mascota; ?>" disabled>
+                            <input type="text" id="nombre" disabled>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label>Tipo</label>
-                            <select disabled>
-                                <?php
-                                    switch ($tipo) {
-                                        case 1:
-                                            echo "<option value=1 selected>Mamífero</option>";
-                                            break;
-                                        case 2:
-                                            echo "<option value=2 selected>Ave</option>";
-                                            break;
-                                        case 3:
-                                            echo "<option value=3 selected>Pez</option>";
-                                            break;
-                                        case 4:
-                                            echo "<option value=4 selected>Anfibio</option>";
-                                            break;
-                                        case 5:
-                                            echo "<option value=5 selected>Reptil</option>";
-                                            break;
-                                    }
-                                ?>
-                            </select>
+                            <input type="text" id="tipo" disabled>
                         </div>
 
                         <div class="datocorto">
                             <label>Edad</label>
-                            <input type="number" value="<?php echo $edad; ?>" disabled>
+                            <input type="text" id="edad" disabled>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label>Sexo</label>
-                            <select disabled>
-                                <?php 
-                                    if ($sexo == "M") {
-                                        echo "<option value='M' selected>Macho</option>";
-                                    } else {
-                                        echo "<option value='H'>Hembra</option>";
-                                    }
-                                ?>
-                            </select>
+                            <input type="text" id="sexo" disabled>
                         </div>
 
                         <div class="datocorto">
                             <label>Tiempo</label>
-                            <select disabled>
-                                <?php 
-                                    switch ($tiempo) {
-                                        case 'D':
-                                            echo "<option value='D' selected>Días</option>";
-                                            break;
-                                        case 'M':
-                                            echo "<option value='M' selected>Meses</option>";
-                                            break;
-                                        case 'A':
-                                            echo "<option value='A' selected>Años</option>";
-                                            break;
-                                    }
-                                ?>
-                            </select>
+                            <input type="text" id="tiempo" disabled>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label>Descripción</label>
-                            <textarea cols="22" rows="5" disabled><?php echo $descripcion; ?></textarea>
+                            <textarea cols="22" rows="5" id="descripcion" disabled></textarea>
                         </div>
 
                         <div class="datocorto">
                             <label>Imagen de la Mascota</label>
-                            <div class="mascota"><img src="../../images/<?php echo $imagen; ?>"></div>
+                            <div class="mascota"><img id="imagen"></div>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label>Adoptante</label>
-                            <input type="text" value="<?php echo $adoptante; ?>" disabled>
+                            <input type="text" id="adoptante" disabled>
                         </div>
 
                         <div class="datocorto">
                             <label>Fecha de Adpción</label>
-                            <input type="date" value="<?php echo $fechaAdopcion; ?>" disabled>
+                            <input type="text" id="fecha" disabled>
                         </div>
                     </div>
                 </form>
@@ -389,106 +346,49 @@
                     <div class="fila">
                         <div class="datocorto">
                             <label>Número</label>
-                            <input type="text" value="<?php echo $idMascota;?>" disabled>
-                            <input type="hidden" name="id" value="<?php echo $idMascota; ?>">
+                            <input type="text" id="idDissabled" disabled>
+                            <input type="hidden" name="id" id="idE"">
                         </div>
 
                         <div class="datocorto">
                             <label for="mascota">Nombre</label>
-                            <input type="text" id="mascota" name="mascota" value="<?php echo $mascota; ?>" placeholder="Ingrese el nombre de la mascota" required>
+                            <input type="text" id="nombreE" name="mascota" placeholder="Ingrese el nombre de la mascota" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label for="tipo">Tipo</label>
-                            <select id="tipo" class="tipo" name="tipo" required>
-                                <?php
-                                    switch ($tipo) {
-                                        case 1:
-                                            echo "<option value=1 selected>Mamífero</option>";
-                                            echo "<option value=2>Ave</option>";
-                                            echo "<option value=3>Pez</option>";
-                                            echo "<option value=4>Anfibio</option>";
-                                            echo "<option value=5>Reptil</option>";
-                                            break;
-                                        case 2:
-                                            echo "<option value=1>Mamífero</option>";
-                                            echo "<option value=2 selected>Ave</option>";
-                                            echo "<option value=3>Pez</option>";
-                                            echo "<option value=4>Anfibio</option>";
-                                            echo "<option value=5>Reptil</option>";
-                                            break;
-                                        case 3:
-                                            echo "<option value=1>Mamífero</option>";
-                                            echo "<option value=2>Ave</option>";
-                                            echo "<option value=3 selected>Pez</option>";
-                                            echo "<option value=4>Anfibio</option>";
-                                            echo "<option value=5>Reptil</option>";
-                                            break;
-                                        case 4:
-                                            echo "<option value=1>Mamífero</option>";
-                                            echo "<option value=2>Ave</option>";
-                                            echo "<option value=3>Pez</option>";
-                                            echo "<option value=4 selected>Anfibio</option>";
-                                            echo "<option value=5>Reptil</option>";
-                                            break;
-                                        case 5:
-                                            echo "<option value=1>Mamífero</option>";
-                                            echo "<option value=2>Ave</option>";
-                                            echo "<option value=3>Pez</option>";
-                                            echo "<option value=4>Anfibio</option>";
-                                            echo "<option value=5 selected>Reptil</option>";
-                                            break;
-                                    }
-                                ?>
+                            <select id="tipoE" class="tipo" name="tipo" required>
+                                <option value=1>Mamífero</option>;
+                                <option value=2>Ave</option>;
+                                <option value=3>Pez</option>;
+                                <option value=4>Anfibio</option>;
+                                <option value=5>Reptil</option>;
                             </select>
                         </div>
 
                         <div class="datocorto">
                             <label for="edad">Edad</label>
-                            <input type="number" id="edad" name="edad" value="<?php echo $edad ?>" placeholder="Ingrese la edad de la mascota" required>
+                            <input type="number" id="edadE" name="edad" placeholder="Ingrese la edad de la mascota" required>
                         </div>
                     </div>
 
                     <div class="fila">
                         <div class="datocorto">
                             <label form="sexo">Sexo</label>
-                            <select id="sexo" name="sexo" required>
-                                <?php 
-                                    if ($sexo == "M") {
-                                        echo "<option value='M' selected>Macho</option>";
-                                        echo "<option value='H'>Hembra</option>";
-                                    } else {
-                                        echo "<option value='M'>Macho</option>";
-                                        echo "<option value='H' selected>Hembra</option>";
-                                    }
-                                ?>
+                            <select id="sexoE" name="sexo" required>
+                                <option value='M'>Macho</option>;
+                                <option value='H'>Hembra</option>";
                             </select>
                         </div>
 
                         <div class="datocorto">
                             <label for="tiempo">Tiempo</label>
-                            <select id="tiempo" name="tiempo" required>
-                                <?php 
-                                    switch ($tiempo) {
-                                        case 'D':
-                                            echo "<option value='D' selected>Días</option>";
-                                            echo "<option value='M'>Meses</option>";
-                                            echo "<option value='A'>Años</option>";
-                                            break;
-                                        case 'M':
-                                            echo "<option value='D'>Días</option>";
-                                            echo "<option value='M' selected>Meses</option>";
-                                            echo "<option value='A'>Años</option>";
-                                            break;
-                                        case 'A':
-                                            echo "<option value='D'>Días</option>";
-                                            echo "<option value='M'>Meses</option>";
-                                            echo "<option value='A' selected>Años</option>";
-                                            break;
-                                    }
-                                ?>
+                            <select id="tiempoE" name="tiempo" required>
+                                <option value='D'>Días</option>;
+                                <option value='M'>Meses</option>;
+                                <option value='A'>Años</option>;
                             </select>
                         </div>
                     </div>
@@ -496,29 +396,12 @@
                     <div class="fila">
                         <div class="datocorto">
                             <label for="descripcion">Descripción</label>
-                            <textarea id="descripcion" name="descripcion" cols="22" rows="3" required><?php echo $descripcion; ?></textarea>
+                            <textarea id="descripcionE" name="descripcion" cols="22" rows="3" required></textarea>
                         </div>
 
                         <div class="datocorto">
                             <label for="imagen">Seleccione la imagen:</label>
-                            <input type="file" class="input-file" name="imagen" id="imagen">
-                        </div>
-                    </div>
-
-                    <div class="fila">
-                        <div class="datocorto">
-                            <label for="adoptante">Adoptante</label>
-                            <select name="adoptante" id="adoptante">
-                                <option disabled selected>Ninguno</option>";
-                                <?php
-                                    $conexion->seleccionPostulante($idMascota);
-                                ?>
-                            </select>
-                        </div>
-
-                        <div class="datocorto">
-                            <label class="fecha">Fecha de Adpción</label>
-                            <input type="date" id="fecha" name="fecha" value="<?php echo date("Y-m-d" , strtotime($fechaAdopcion)); ?>">
+                            <input type="file" class="input-file" name="imagen">
                         </div>
                     </div>
 

@@ -24,12 +24,22 @@
         echo "Problemas de ejecución del SQL";
     }
 
-    $fechaActual = date("Y-m-d");
+    if ($estado == 1) {
+        $fechaActual = date("Y-m-d");
 
-    // Actualización de la mascota adoptada
-    $sql = "UPDATE mascota SET `idPostulante` = '$idPostulante', `fechaAdopcion` = '$fechaActual' WHERE idMascota = $idMascota";
+        // Actualización de la mascota adoptada
+        $sql = "UPDATE mascota SET `idPostulante` = '$idPostulante', `fechaAdopcion` = '$fechaActual' WHERE idMascota = $idMascota";
 
-    $resSQL = $conexion->query($sql);
+        $resSQL = $conexion->query($sql);
+        if ($resSQL == "") {
+            echo "Problemas de ejecución del SQL";
+        }
+
+        // Dar de baja a todas las demás postulaciones
+        $sql = "UPDATE `postulacion` SET `estado`= 3 WHERE idMascota = $idMascota AND idPostulante != $idPostulante";
+        $resSQL = $conexion->query($sql);
+
+    }
 
     // Validación de posible error al actualizar la imagen
     if ($resSQL == "") {

@@ -24,6 +24,9 @@
     <!-- Importación de librería de iconos -->
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 
+    <!-- Importación de AJAX para envio de datos entre JS y PHP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
     <!-- Declaración del archivo que contiene todas las funciones para utilizar -->
@@ -58,20 +61,24 @@
     <div class="tarjeta">
         <p class="titulo">Lista de Postulantes</p>
         <div class="contenido">
-            <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
-            <div class="tabla">
-                <table>
-                    <tr>
-                        <th class="numero">#</th>
+            <input onkeyup="buscar_ahora($('#buscar').val());" type="text" name="buscar" id="buscar" placeholder="Buscar...">
+            <div id="tabla" class="tabla">
+                <!-- <table>
+                    <tr> -->
+                        <!-- <th class="numero">#</th>
                         <th class="postulante">Postulante</th>
                         <th class="mascota">Mascota</th>
-                        <th class="fecha">Fecha</th>
-                    </tr>
+                        <th class="fecha">Fecha</th> -->
+
+                        <!-- <th class="numero">#</th>
+                        <th class="mascota">Mascota</th>
+                        <th class="postulantes">Cantidad de Postulantes</th> -->
+                    <!-- </tr> -->
 
                     <?php
-                        $conexion->listaPostulantes();
+                        //$conexion->listaPostulantes();
                     ?>
-                </table>
+                <!-- </table> -->
             </div>
         </div>
     </div>
@@ -91,5 +98,9 @@
             <a href=""><iconify-icon icon="ic:outline-tiktok"></iconify-icon></a>
         </nav>
     </footer>
+
+     <!-- Importación de código -->
+     <script src="../../js/interface_script.js"></script>
+     <script>$(buscar_ahora());</script>
 </body>
 </html>

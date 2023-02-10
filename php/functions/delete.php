@@ -10,8 +10,8 @@
     $id = (int)$_POST['id'];
 
     if ($_POST['id1']) {
-        $id1 = $_POST['id1'];
-    }  
+        $id1 = (int)$_POST['id1'];
+    }
 
     switch ($_POST['tabla']) {
         case "mascota":
@@ -24,7 +24,8 @@
             break;
         case "postulante":
             // Eliminación del postulante
-            $sql = "DELETE FROM postulacion WHERE idPostulante = $id AND idMascota = $id1";
+            // $sql = "DELETE FROM postulacion WHERE idPostulante = $id AND idMascota = $id1";
+            $sql = "DELETE FROM persona WHERE idPersona = $id";
             break;
     }
     

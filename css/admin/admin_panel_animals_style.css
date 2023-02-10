@@ -256,7 +256,7 @@ body {
 .tabla {
     grid-area: tabla;
 
-    height: 91.5%;
+    height: 96.5%;
     margin-top: 20px;
     padding: 15px;
     background-color: white;
@@ -314,7 +314,7 @@ body {
 /* Estilos de la ventana flotante */
 #ventana, #ventana-n, #ventana-e {
     width: 50%;
-    height: 80%;
+    height: 85%;
     border: none;
     border-radius: 10px;
     position: absolute;
@@ -420,6 +420,13 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+#ventana .formulario .datocorto textarea:disabled {
+    border: 2px solid #FF9054;
+    color: black;
+    background-color: #F2F2F2;
+    cursor: not-allowed !important;
+}
+
 #ventana .formulario .datocorto textarea:hover, #ventana-n .formulario .datocorto textarea:hover, #ventana-e .formulario .datocorto textarea:hover {
     border: 2px solid #FF9054;
 }
@@ -431,7 +438,7 @@ body {
 }
 
 #ventana .formulario .datocorto .mascota {
-    width: 70%;
+    width: 65%;
     height: 150px;
     margin: auto;
     border-radius: 5px;
@@ -551,7 +558,7 @@ td {
 
 /* Estilo a las celdas de la columna que contienen el identificador de cada entidad */
 .id {
-    width: 30px;
+    width: 40px;
     background-color: #F2F2F2;
     border: 3px solid #F2F2F2;
 }
@@ -573,7 +580,11 @@ td {
     width: 7%;
 }
 
-.adoptante, .fecha {
+.adoptante {
+    width: 12.5%;
+}
+
+.fecha {
     width: 11%;
 }
 

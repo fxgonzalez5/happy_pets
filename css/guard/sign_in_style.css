@@ -88,23 +88,23 @@ body {
     justify-content: space-between;
 }
 
+.contenido .tarjeta .formulario .fila .error {
+    width: 45%;
+}
+
 /* estilo del contenedor de las cajas de texto */
 .contenido .tarjeta .formulario .fila .datocorto {
     width: 45%;
-    border-bottom: 2px solid #9A9A9A;
  }
+
+.contenido .tarjeta .formulario .fila .error #dato-contrasenia, .contenido .tarjeta .formulario .fila .error #dato-rep_contrasenia {
+   width: 100%;
+}
 
  .contenido .tarjeta .formulario .datolargo {
     width: 85%;
     margin-bottom: 20px;
-    border-bottom: 2px solid #9A9A9A;
  }
-
-/* estilo del contenedor de las cajas de texto cuando se está ingresando las credenciles */
-.contenido .tarjeta .formulario .fila .datocorto:hover, .contenido .tarjeta .formulario .datolargo:hover {
-    color: black;
-    border-bottom: 2px solid #FF9054;
-}
 
 /* estilo al titulo de cada caja de texto */
 .contenido .tarjeta .formulario label {
@@ -177,5 +177,28 @@ body {
 /* estilo personalizado para los campos obligatorios del formulario */
 .obligatorio {
     font-weight: bold;
+    color: red;
+}
+
+.vacio {
+    border-bottom: 2px solid #9A9A9A;
+}
+
+.lleno {
+    color: black;
+    border-bottom: 2px solid #FF9054;
+}
+
+.oculto {
+    visibility: hidden;
+}
+
+.correcto {
+    visibility: visible;
+    color: green;
+}
+
+.incorrecto {
+    visibility: visible;
     color: red;
 }

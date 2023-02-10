@@ -42,30 +42,6 @@
         }
     }
 
-    if ($adoptante) {
-        // Insersión de la adopción de la mascota
-        $sql = "UPDATE mascota SET `idPostulante` = '$adoptante', `fechaAdopcion` = '$fecha' WHERE idMascota = $id";
-
-        // Obtención del resultado de la consulta sql 
-        $resSQL = $conexion->query($sql);
-
-        // Validación de posible error al hacer cambios
-        if ($resSQL == "") {
-            echo "Problemas de ejecución del SQL";
-        }
-
-        // Insersión de la adopción de la mascota
-        $sql = "UPDATE postulacion SET `estado` = '1' WHERE idPostulante = '$adoptante' AND idMascota = $id";
-
-        // Obtención del resultado de la consulta sql 
-        $resSQL = $conexion->query($sql);
-        
-        // Validación de posible error al hacer cambios
-        if ($resSQL == "") {
-            echo "Problemas de ejecución del SQL";
-        }
-    }
-
     // Validación de posible error al actualizar la imagen
     if ($resSQL == "") {
         echo "Problemas de ejecución del SQL";

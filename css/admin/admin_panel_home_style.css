@@ -360,10 +360,10 @@ body {
     justify-content: space-between;
 }
 
-/* Estilo de la tarjeta de la lista de los usuarios registrados */
+/* Estilo de la tarjeta de la lista de los usuarios registrados y mascotas */
 .tarjeta-inferior {
     /* Tamaño */
-    width: 46.5%;
+    width: 49%;
 
     /* Márgenes */
     margin-top: 20px;
@@ -390,7 +390,7 @@ body {
 
 /* Asignación del tamaño que ocuparán las celdas de la columna que contienen la fecha de nacimiento del usuario */
 .tarjeta-inferior .edad {
-    width: 5%;
+    width: 7%;
 }
 
 /* Asignación del tamaño que ocuparán las celdas de la columna que contienen el correo electrónico del usuario 

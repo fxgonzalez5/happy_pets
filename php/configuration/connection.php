@@ -91,7 +91,14 @@
             $consultaId = $this->query($sql);
 
             while ($row = mysqli_fetch_array($consultaId)) {
-                echo "<div class='mascota'><img src='images/$row[1]'></div>";
+                echo "<div class='mascota'>";
+                echo "<div class='adelante'><img src='images/$row[1]'></div>";
+                echo "<div class='atras'>";
+                echo "<p class='nombre'>$row[2]</p>";
+                echo "<p class='descripcion'>$row[3]</p>";
+                echo "<a href='./pages/interface/description_page.php?id=$row[0]'>+Info</a>";
+                echo "</div>";
+                echo "</div>";
             }
         }
 
@@ -113,9 +120,35 @@
         }
 
         function listaPostulantes() {
+            $sql = "SELECT `idMascota`, `mascota`, COUNT(*) AS cantidad_postulantes FROM postulaciones WHERE estado = 0 OR estado = 2 GROUP BY idMascota";
+            $consultaId = $this->query($sql);
+
+            while ($row = mysqli_fetch_array($consultaId)) {
+                echo "<tr>";
+
+                if ($row[0] < 10) {
+                    echo "<td class='gris'>0$row[0]</td>";
+                } else {
+                    echo "<td class='gris'>$row[0]</td>";
+                }
+                echo "<td class='azul'>$row[1]</td>";
+                echo "<td class='naranja'>$row[2]</td>";
+
+                echo "</tr>";
+            }
+        }
+
+        function listaPostulantes1() {
             $sql = "SELECT `nombre`, `apellido`, `mascota`, `fecha` FROM postulaciones ORDER BY idPersona DESC";
             $consultaId = $this->query($sql);
             $conteo = 1;
+
+             // Cantidad de postulantes a una mascota
+            $sql = "SELECT idMascota, COUNT(*) AS cantidad_postulantes FROM `postulacion` GROUP BY idMascota";
+            $data = $this->queryFor($sql);
+
+            $idMascota = $data['idMascota'];
+            $cantidadPostulantes = $data['cantidad_postulantes'];
 
             while ($row = mysqli_fetch_array($consultaId)) {
                 echo "<tr>";
@@ -134,6 +167,7 @@
                 echo "</tr>";
             }
         }
+
         
         // Funciones para Vizualización del Administrador
         function imagenCuenta(){
@@ -595,6 +629,7 @@
                     echo "<td class='usuario'>No tiene</td>";
                 }
                 echo "<td class='espacio-columnas'></td>";
+                echo "<td style='display:none;'>$row[10]</td>";
                 echo "<td class='edad'>$row[5]</td>";
                 echo "<td class='espacio-columnas'></td>";
                 if (!$row[3]){
@@ -642,15 +677,15 @@
             echo "<th class='espacio-columnas'></th>";
             echo "<th class='persona'>Persona</th>";
             echo "<th class='espacio-columnas'></th>";
+            echo "<th class='celular'>Celular</th>";
+            echo "<th class='espacio-columnas'></th>";
+            echo "<th>Correo Electrónico</th>";
+            echo "<th class='espacio-columnas'></th>";
             echo "<th class='mascota'>Mascota</th>";
             echo "<th class='espacio-columnas'></th>";
             echo "<th class='edad'>Edad</th>";
             echo "<th class='espacio-columnas'></th>";
             echo "<th class='sexo'>Sexo</th>";
-            echo "<th class='espacio-columnas'></th>";
-            echo "<th class='celular'>Celular</th>";
-            echo "<th class='espacio-columnas'></th>";
-            echo "<th>Correo Electrónico</th>";
             echo "<th class='espacio-columnas'></th>";
             echo "<th class='estado'>Estado</th>";
             echo "<th class='espacio-columnas'></th>";
@@ -675,6 +710,10 @@
                 echo "<td class='espacio-columnas'></td>";
                 echo "<td class='persona'>$row[1] $row[2]</td>";
                 echo "<td class='espacio-columnas'></td>";
+                echo "<td class='celular'>$row[3]</td>";
+                echo "<td class='espacio-columnas'></td>";
+                echo "<td>$row[4]</td>";
+                echo "<td class='espacio-columnas'></td>";
                 echo "<td class='mascota'>$row[6]</td>";
                 echo "<td class='espacio-columnas'></td>";
                 switch ($row[8]) {
@@ -694,10 +733,6 @@
                 } else {
                     echo "<td class='sexo'>Hembra</td>";
                 }
-                echo "<td class='espacio-columnas'></td>";
-                echo "<td class='celular'>$row[3]</td>";
-                echo "<td class='espacio-columnas'></td>";
-                echo "<td>$row[4]</td>";
                 echo "<td class='espacio-columnas'></td>";
                 switch ($row[10]) {
                     case 0:

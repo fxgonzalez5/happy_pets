@@ -256,6 +256,9 @@
         </dialog>
     </div>
 
+    <!-- Carga del identificador del usuario iniciado sesión -->
+    <script>var idUsuario = <?php echo $idUsuario; ?>;</script>
+
     <!-- Importación de código -->
     <script src="../../js/admin_script.js"></script>
 </body>
